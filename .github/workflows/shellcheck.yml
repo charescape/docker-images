@@ -1,0 +1,18 @@
+name: shellcheck
+
+on:
+  push:
+
+jobs:
+  shellcheck:
+    name: ShellCheck
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+      - name: Run ShellCheck
+        run: |
+          set -eu
+          git ls-files -z '*.sh' '*.run' \
+            | xargs -0 docker run --rm -v "$PWD:/mnt" -w /mnt koalaman/shellcheck:stable

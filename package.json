@@ -1,0 +1,17 @@
+{
+    "$schema": "https://www.schemastore.org/package.json",
+    "name": "service-containers",
+    "version": "4.0.2",
+    "packageManager": "npm@10.9.7",
+    "description": "",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "major": "node scripts/release.mjs major",
+        "patch": "node scripts/release.mjs patch",
+        "version": "node scripts/write-image-version.mjs"
+    },
+    "dependencies": {
+        "np": "^12.0.1"
+    }
+}

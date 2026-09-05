@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# `/sbin/setuser www-data` runs mariadbd as www-data.
+# exec so SIGTERM from /sbin/my_init reaches mariadbd (not this shell).
+# runit requires a foreground process: do not use mysql.server / mariadbd-safe.
+
+exec /sbin/setuser www-data /usr/local/mysql/bin/mariadbd --defaults-file=/etc/my.cnf

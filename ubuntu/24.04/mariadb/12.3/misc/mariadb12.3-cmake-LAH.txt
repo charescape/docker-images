@@ -1,0 +1,2656 @@
+# cmake .. -LAH  >  /misc/mariadb12.3-cmake-LAH.txt  2>&1
+
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Running cmake version 3.28.3
+-- Could NOT find Git (missing: GIT_EXECUTABLE)
+-- MariaDB 12.3.3
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of void *
+-- Check size of void * - done
+-- Packaging as: mariadb-12.3.3-Linux-x86_64
+-- Performing Test HAVE_VISIBILITY_HIDDEN
+-- Performing Test HAVE_VISIBILITY_HIDDEN - Success
+-- Performing Test have_C__fno_omit_frame_pointer
+-- Performing Test have_C__fno_omit_frame_pointer - Success
+-- Performing Test have_CXX__fno_omit_frame_pointer
+-- Performing Test have_CXX__fno_omit_frame_pointer - Success
+-- Performing Test have_C__pie__fPIC
+-- Performing Test have_C__pie__fPIC - Success
+-- Performing Test have_CXX__pie__fPIC
+-- Performing Test have_CXX__pie__fPIC - Success
+-- Performing Test HAVE_LINK_FLAG__Wl__z_relro__z_now
+-- Performing Test HAVE_LINK_FLAG__Wl__z_relro__z_now - Success
+-- Performing Test have_C__fstack_protector___param_ssp_buffer_size_4
+-- Performing Test have_C__fstack_protector___param_ssp_buffer_size_4 - Success
+-- Performing Test have_CXX__fstack_protector___param_ssp_buffer_size_4
+-- Performing Test have_CXX__fstack_protector___param_ssp_buffer_size_4 - Success
+-- Performing Test have_C__D_FORTIFY_SOURCE_2
+-- Performing Test have_C__D_FORTIFY_SOURCE_2 - Success
+-- Performing Test have_CXX__D_FORTIFY_SOURCE_2
+-- Performing Test have_CXX__D_FORTIFY_SOURCE_2 - Success
+-- Performing Test have_C__ggdb3
+-- Performing Test have_C__ggdb3 - Success
+-- Performing Test have_CXX__ggdb3
+-- Performing Test have_CXX__ggdb3 - Success
+-- Wsrep-lib version: 1.0.0
+-- Performing Test HAVE_SUGGEST_OVERRIDE
+-- Performing Test HAVE_SUGGEST_OVERRIDE - Success
+-- Performing Test HAVE_INCONSISTENT_MISSING_DESTRUCTOR_OVERRIDE
+-- Performing Test HAVE_INCONSISTENT_MISSING_DESTRUCTOR_OVERRIDE - Failed
+-- Performing Test HAVE_EXTRA_SEMI
+-- Performing Test HAVE_EXTRA_SEMI - Success
+-- Looking for dlopen in dl
+-- Looking for dlopen in dl - found
+-- Looking for floor
+-- Looking for floor - not found
+-- Looking for floor in m
+-- Looking for floor in m - found
+-- Looking for gethostbyname_r
+-- Looking for gethostbyname_r - found
+-- Looking for bind
+-- Looking for bind - found
+-- Looking for crypt
+-- Looking for crypt - not found
+-- Looking for crypt in crypt
+-- Looking for crypt in crypt - found
+-- Looking for setsockopt
+-- Looking for setsockopt - found
+-- Looking for sched_yield
+-- Looking for sched_yield - found
+-- Looking for clock_gettime
+-- Looking for clock_gettime - found
+-- Looking for backtrace_symbols_fd
+-- Looking for backtrace_symbols_fd - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Looking for 4 include files stdlib.h, ..., float.h
+-- Looking for 4 include files stdlib.h, ..., float.h - found
+-- Looking for include file alloca.h
+-- Looking for include file alloca.h - found
+-- Looking for include file arpa/inet.h
+-- Looking for include file arpa/inet.h - found
+-- Looking for include file crypt.h
+-- Looking for include file crypt.h - found
+-- Looking for include file dirent.h
+-- Looking for include file dirent.h - found
+-- Looking for include file dlfcn.h
+-- Looking for include file dlfcn.h - found
+-- Looking for include file execinfo.h
+-- Looking for include file execinfo.h - found
+-- Looking for include file fcntl.h
+-- Looking for include file fcntl.h - found
+-- Looking for include file fenv.h
+-- Looking for include file fenv.h - found
+-- Looking for include file float.h
+-- Looking for include file float.h - found
+-- Looking for include file fpu_control.h
+-- Looking for include file fpu_control.h - found
+-- Looking for include file grp.h
+-- Looking for include file grp.h - found
+-- Looking for include file ieeefp.h
+-- Looking for include file ieeefp.h - not found
+-- Looking for include file inttypes.h
+-- Looking for include file inttypes.h - found
+-- Looking for include file immintrin.h
+-- Looking for include file immintrin.h - found
+-- Looking for include file langinfo.h
+-- Looking for include file langinfo.h - found
+-- Looking for include file link.h
+-- Looking for include file link.h - found
+-- Looking for include file linux/unistd.h
+-- Looking for include file linux/unistd.h - found
+-- Looking for include file limits.h
+-- Looking for include file limits.h - found
+-- Looking for include file locale.h
+-- Looking for include file locale.h - found
+-- Looking for include file malloc.h
+-- Looking for include file malloc.h - found
+-- Looking for include file memory.h
+-- Looking for include file memory.h - found
+-- Looking for include file ndir.h
+-- Looking for include file ndir.h - not found
+-- Looking for include file netinet/in.h
+-- Looking for include file netinet/in.h - found
+-- Looking for include file paths.h
+-- Looking for include file paths.h - found
+-- Looking for include file poll.h
+-- Looking for include file poll.h - found
+-- Looking for include file sys/poll.h
+-- Looking for include file sys/poll.h - found
+-- Looking for include file pwd.h
+-- Looking for include file pwd.h - found
+-- Looking for include file sched.h
+-- Looking for include file sched.h - found
+-- Looking for include file select.h
+-- Looking for include file select.h - not found
+-- Looking for include files sys/types.h, sys/dir.h
+-- Looking for include files sys/types.h, sys/dir.h - found
+-- Looking for include files sys/types.h, sys/event.h
+-- Looking for include files sys/types.h, sys/event.h - not found
+-- Looking for include file sys/ndir.h
+-- Looking for include file sys/ndir.h - not found
+-- Looking for include file sys/pte.h
+-- Looking for include file sys/pte.h - not found
+-- Looking for include file stdlib.h
+-- Looking for include file stdlib.h - found
+-- Looking for include file strings.h
+-- Looking for include file strings.h - found
+-- Looking for include file string.h
+-- Looking for include file string.h - found
+-- Looking for include file synch.h
+-- Looking for include file synch.h - not found
+-- Looking for include file sysent.h
+-- Looking for include file sysent.h - not found
+-- Looking for include file sys/file.h
+-- Looking for include file sys/file.h - found
+-- Looking for include file sys/fpu.h
+-- Looking for include file sys/fpu.h - not found
+-- Looking for include file sys/ioctl.h
+-- Looking for include file sys/ioctl.h - found
+-- Looking for include files sys/types.h, sys/malloc.h
+-- Looking for include files sys/types.h, sys/malloc.h - not found
+-- Looking for include file sys/mman.h
+-- Looking for include file sys/mman.h - found
+-- Looking for include file linux/mman.h
+-- Looking for include file linux/mman.h - found
+-- Looking for include file sys/prctl.h
+-- Looking for include file sys/prctl.h - found
+-- Looking for include file sys/resource.h
+-- Looking for include file sys/resource.h - found
+-- Looking for include file sys/select.h
+-- Looking for include file sys/select.h - found
+-- Looking for include file sys/socket.h
+-- Looking for include file sys/socket.h - found
+-- Looking for include file sys/stat.h
+-- Looking for include file sys/stat.h - found
+-- Looking for include file sys/stream.h
+-- Looking for include file sys/stream.h - not found
+-- Looking for include file sys/syscall.h
+-- Looking for include file sys/syscall.h - found
+-- Looking for include file asm/termbits.h
+-- Looking for include file asm/termbits.h - found
+-- Looking for include file termbits.h
+-- Looking for include file termbits.h - not found
+-- Looking for include file termios.h
+-- Looking for include file termios.h - found
+-- Looking for include file termio.h
+-- Looking for include file termio.h - found
+-- Looking for include file termcap.h
+-- Looking for include file termcap.h - found
+-- Looking for include file unistd.h
+-- Looking for include file unistd.h - found
+-- Looking for include file utime.h
+-- Looking for include file utime.h - found
+-- Looking for include file varargs.h
+-- Looking for include file varargs.h - not found
+-- Looking for include file sys/time.h
+-- Looking for include file sys/time.h - found
+-- Looking for include file sys/utime.h
+-- Looking for include file sys/utime.h - not found
+-- Looking for include file sys/wait.h
+-- Looking for include file sys/wait.h - found
+-- Looking for include file sys/param.h
+-- Looking for include file sys/param.h - found
+-- Looking for include file sys/vadvise.h
+-- Looking for include file sys/vadvise.h - not found
+-- Looking for include file fnmatch.h
+-- Looking for include file fnmatch.h - found
+-- Looking for include file stdarg.h
+-- Looking for include file stdarg.h - found
+-- Looking for include files stdlib.h, sys/un.h
+-- Looking for include files stdlib.h, sys/un.h - found
+-- Looking for include file wchar.h
+-- Looking for include file wchar.h - found
+-- Looking for include file wctype.h
+-- Looking for include file wctype.h - found
+-- Looking for include file sys/sockio.h
+-- Looking for include file sys/sockio.h - not found
+-- Looking for include file sys/utsname.h
+-- Looking for include file sys/utsname.h - found
+-- Looking for include file sys/statvfs.h
+-- Looking for include file sys/statvfs.h - found
+-- Looking for include file bfd.h
+-- Looking for include file bfd.h - not found
+-- Looking for include file sys/ptem.h
+-- Looking for include file sys/ptem.h - not found
+-- Performing Test have_C__Werror
+-- Performing Test have_C__Werror - Success
+-- Performing Test HAVE_PTHREAD_ONCE_INIT
+-- Performing Test HAVE_PTHREAD_ONCE_INIT - Success
+-- Looking for accept4
+-- Looking for accept4 - found
+-- Looking for access
+-- Looking for access - found
+-- Looking for backtrace
+-- Looking for backtrace - found
+-- Looking for backtrace_symbols
+-- Looking for backtrace_symbols - found
+-- Looking for backtrace_symbols_fd
+-- Looking for backtrace_symbols_fd - found
+-- Looking for printstack
+-- Looking for printstack - not found
+-- Looking for bfill
+-- Looking for bfill - not found
+-- Looking for index
+-- Looking for index - found
+-- Looking for clock_gettime
+-- Looking for clock_gettime - found
+-- Looking for cuserid
+-- Looking for cuserid - found
+-- Looking for ftruncate
+-- Looking for ftruncate - found
+-- Looking for compress
+-- Looking for compress - not found
+-- Looking for crypt
+-- Looking for crypt - found
+-- Looking for dladdr
+-- Looking for dladdr - found
+-- Looking for dlerror
+-- Looking for dlerror - found
+-- Looking for dlopen
+-- Looking for dlopen - found
+-- Looking for fchmod
+-- Looking for fchmod - found
+-- Looking for fcntl
+-- Looking for fcntl - found
+-- Looking for fdatasync
+-- Looking for fdatasync - found
+-- Looking for fdatasync
+-- Looking for fdatasync - found
+-- Looking for fesetround
+-- Looking for fesetround - found
+-- Looking for fedisableexcept
+-- Looking for fedisableexcept - found
+-- Looking for fseeko
+-- Looking for fseeko - found
+-- Looking for fsync
+-- Looking for fsync - found
+-- Looking for getcwd
+-- Looking for getcwd - found
+-- Looking for gethostbyaddr_r
+-- Looking for gethostbyaddr_r - found
+-- Looking for gethrtime
+-- Looking for gethrtime - not found
+-- Looking for getpass
+-- Looking for getpass - found
+-- Looking for getpassphrase
+-- Looking for getpassphrase - not found
+-- Looking for getpwnam
+-- Looking for getpwnam - found
+-- Looking for getpwuid
+-- Looking for getpwuid - found
+-- Looking for getrlimit
+-- Looking for getrlimit - found
+-- Looking for getifaddrs
+-- Looking for getifaddrs - found
+-- Looking for getrusage
+-- Looking for getrusage - found
+-- Looking for getwd
+-- Looking for getwd - found
+-- Looking for gmtime_r
+-- Looking for gmtime_r - found
+-- Looking for initgroups
+-- Looking for initgroups - found
+-- Looking for ldiv
+-- Looking for ldiv - found
+-- Looking for localtime_r
+-- Looking for localtime_r - found
+-- Looking for lstat
+-- Looking for lstat - found
+-- Looking for madvise
+-- Looking for madvise - found
+-- Looking for mallinfo
+-- Looking for mallinfo - found
+-- Looking for mallinfo2
+-- Looking for mallinfo2 - found
+-- Looking for malloc_zone_statistics
+-- Looking for malloc_zone_statistics - not found
+-- Looking for memcpy
+-- Looking for memcpy - found
+-- Looking for memmove
+-- Looking for memmove - found
+-- Looking for mkstemp
+-- Looking for mkstemp - found
+-- Looking for mkostemp
+-- Looking for mkostemp - found
+-- Looking for mlock
+-- Looking for mlock - found
+-- Looking for mlockall
+-- Looking for mlockall - found
+-- Looking for mmap
+-- Looking for mmap - found
+-- Looking for mmap64
+-- Looking for mmap64 - found
+-- Looking for mprotect
+-- Looking for mprotect - found
+-- Looking for perror
+-- Looking for perror - found
+-- Performing Test HAVE_RO_AFTER_INIT
+-- Performing Test HAVE_RO_AFTER_INIT - Success
+-- Looking for poll
+-- Looking for poll - found
+-- Looking for posix_fallocate
+-- Looking for posix_fallocate - found
+-- Looking for pread
+-- Looking for pread - found
+-- Looking for pthread_attr_create
+-- Looking for pthread_attr_create - not found
+-- Looking for pthread_attr_getstacksize
+-- Looking for pthread_attr_getstacksize - found
+-- Looking for pthread_attr_setscope
+-- Looking for pthread_attr_setscope - found
+-- Looking for pthread_attr_getguardsize
+-- Looking for pthread_attr_getguardsize - found
+-- Looking for pthread_attr_setstacksize
+-- Looking for pthread_attr_setstacksize - found
+-- Looking for pthread_condattr_create
+-- Looking for pthread_condattr_create - not found
+-- Looking for pthread_getaffinity_np
+-- Looking for pthread_getaffinity_np - found
+-- Looking for pthread_getattr_np
+-- Looking for pthread_getattr_np - found
+-- Looking for pthread_rwlock_rdlock
+-- Looking for pthread_rwlock_rdlock - found
+-- Looking for pthread_sigmask
+-- Looking for pthread_sigmask - found
+-- Looking for pthread_yield_np
+-- Looking for pthread_yield_np - not found
+-- Looking for putenv
+-- Looking for putenv - found
+-- Looking for readlink
+-- Looking for readlink - found
+-- Looking for realpath
+-- Looking for realpath - found
+-- Looking for rename
+-- Looking for rename - found
+-- Looking for rwlock_init
+-- Looking for rwlock_init - not found
+-- Looking for sched_yield
+-- Looking for sched_yield - found
+-- Looking for setenv
+-- Looking for setenv - found
+-- Looking for setlocale
+-- Looking for setlocale - found
+-- Looking for sigaction
+-- Looking for sigaction - found
+-- Looking for sigthreadmask
+-- Looking for sigthreadmask - not found
+-- Looking for sigwait
+-- Looking for sigwait - found
+-- Looking for sigwaitinfo
+-- Looking for sigwaitinfo - found
+-- Looking for sigset
+-- Looking for sigset - found
+-- Looking for sleep
+-- Looking for sleep - found
+-- Looking for stpcpy
+-- Looking for stpcpy - found
+-- Looking for strcoll
+-- Looking for strcoll - found
+-- Looking for strerror
+-- Looking for strerror - found
+-- Looking for strnlen
+-- Looking for strnlen - found
+-- Looking for strpbrk
+-- Looking for strpbrk - found
+-- Looking for strtok_r
+-- Looking for strtok_r - found
+-- Looking for strtoll
+-- Looking for strtoll - found
+-- Looking for strtoul
+-- Looking for strtoul - found
+-- Looking for strtoull
+-- Looking for strtoull - found
+-- Looking for strcasecmp
+-- Looking for strcasecmp - found
+-- Looking for tell
+-- Looking for tell - not found
+-- Looking for thr_yield
+-- Looking for thr_yield - not found
+-- Looking for vasprintf
+-- Looking for vasprintf - found
+-- Looking for vsnprintf
+-- Looking for vsnprintf - found
+-- Looking for nl_langinfo
+-- Looking for nl_langinfo - found
+-- Performing Test HAVE_READDIR_R
+-- Performing Test HAVE_READDIR_R - Failed
+-- Looking for include file time.h
+-- Looking for include file time.h - found
+-- Looking for include file sys/times.h
+-- Looking for include file sys/times.h - found
+-- Looking for include file ia64intrin.h
+-- Looking for include file ia64intrin.h - not found
+-- Looking for times
+-- Looking for times - found
+-- Looking for gettimeofday
+-- Looking for gettimeofday - found
+-- Looking for read_real_time
+-- Looking for read_real_time - not found
+-- Looking for ftime
+-- Looking for ftime - found
+-- Looking for time
+-- Looking for time - found
+-- Looking for madvise
+-- Looking for madvise - found
+-- Looking for getpagesizes
+-- Looking for getpagesizes - not found
+-- Looking for tzname
+-- Looking for tzname - found
+-- Looking for lrand48
+-- Looking for lrand48 - found
+-- Looking for TIOCGWINSZ
+-- Looking for TIOCGWINSZ - found
+-- Looking for FIONREAD
+-- Looking for FIONREAD - found
+-- Looking for TIOCSTAT
+-- Looking for TIOCSTAT - not found
+-- Looking for FIONREAD
+-- Looking for FIONREAD - not found
+-- Check size of sigset_t
+-- Check size of sigset_t - done
+-- Check size of mode_t
+-- Check size of mode_t - done
+-- Check size of sighandler_t
+-- Check size of sighandler_t - done
+-- Check size of in_addr_t
+-- Check size of in_addr_t - done
+-- Check size of char *
+-- Check size of char * - done
+-- Check size of long
+-- Check size of long - done
+-- Check size of size_t
+-- Check size of size_t - done
+-- Check size of short
+-- Check size of short - done
+-- Check size of int
+-- Check size of int - done
+-- Check size of long long
+-- Check size of long long - done
+-- Check size of off_t
+-- Check size of off_t - done
+-- Check size of uchar
+-- Check size of uchar - failed
+-- Check size of uint
+-- Check size of uint - done
+-- Check size of ulong
+-- Check size of ulong - done
+-- Check size of int8
+-- Check size of int8 - failed
+-- Check size of uint8
+-- Check size of uint8 - failed
+-- Check size of int16
+-- Check size of int16 - failed
+-- Check size of uint16
+-- Check size of uint16 - failed
+-- Check size of int32
+-- Check size of int32 - failed
+-- Check size of uint32
+-- Check size of uint32 - failed
+-- Check size of int64
+-- Check size of int64 - failed
+-- Check size of uint64
+-- Check size of uint64 - failed
+-- Check size of time_t
+-- Check size of time_t - done
+-- Performing Test TIME_T_UNSIGNED
+-- Performing Test TIME_T_UNSIGNED - Failed
+-- Performing Test HAVE_SELECT
+-- Performing Test HAVE_SELECT - Success
+-- Performing Test HAVE_TIMESPEC_TS_SEC
+-- Performing Test HAVE_TIMESPEC_TS_SEC - Failed
+-- Performing Test QSORT_TYPE_IS_VOID
+-- Performing Test QSORT_TYPE_IS_VOID - Success
+-- Performing Test HAVE_SOCKET_SIZE_T_AS_socklen_t
+-- Performing Test HAVE_SOCKET_SIZE_T_AS_socklen_t - Success
+-- Performing Test HAVE_PTHREAD_YIELD_ZERO_ARG
+-- Performing Test HAVE_PTHREAD_YIELD_ZERO_ARG - Success
+-- Performing Test SIGNAL_RETURN_TYPE_IS_VOID
+-- Performing Test SIGNAL_RETURN_TYPE_IS_VOID - Success
+-- Looking for include files time.h, sys/time.h
+-- Looking for include files time.h, sys/time.h - found
+-- Looking for O_NONBLOCK
+-- Looking for O_NONBLOCK - found
+-- Performing Test C_HAS_inline
+-- Performing Test C_HAS_inline - Success
+-- Looking for tcgetattr
+-- Looking for tcgetattr - found
+-- Performing Test HAVE_POSIX_SIGNALS
+-- Performing Test HAVE_POSIX_SIGNALS - Success
+-- Performing Test HAVE_ABI_CXA_DEMANGLE
+-- Performing Test HAVE_ABI_CXA_DEMANGLE - Success
+-- Performing Test HAVE_WEAK_SYMBOL
+-- Performing Test HAVE_WEAK_SYMBOL - Success
+-- Performing Test HAVE_ATTRIBUTE_CLEANUP
+-- Performing Test HAVE_ATTRIBUTE_CLEANUP - Success
+-- Performing Test HAVE_CXX_NEW
+-- Performing Test HAVE_CXX_NEW - Success
+-- Performing Test HAVE_SOLARIS_STYLE_GETHOST
+-- Performing Test HAVE_SOLARIS_STYLE_GETHOST - Failed
+-- Performing Test HAVE_GCC_C11_ATOMICS_WITHOUT_LIBATOMIC
+-- Performing Test HAVE_GCC_C11_ATOMICS_WITHOUT_LIBATOMIC - Success
+-- Looking for include files valgrind/memcheck.h, valgrind/valgrind.h
+-- Looking for include files valgrind/memcheck.h, valgrind/valgrind.h - not found
+-- Looking for netinet/in6.h
+-- Looking for netinet/in6.h - not found
+-- Check size of struct sockaddr_in6
+-- Check size of struct sockaddr_in6 - done
+-- Check size of struct in6_addr
+-- Check size of struct in6_addr - done
+-- Performing Test HAVE_SOCKADDR_STORAGE_SS_FAMILY
+-- Performing Test HAVE_SOCKADDR_STORAGE_SS_FAMILY - Success
+-- Performing Test HAVE_SOCKADDR_IN_SIN_LEN
+-- Performing Test HAVE_SOCKADDR_IN_SIN_LEN - Failed
+-- Performing Test HAVE_SOCKADDR_IN6_SIN6_LEN
+-- Performing Test HAVE_SOCKADDR_IN6_SIN6_LEN - Failed
+-- Performing Test STRUCT_DIRENT_HAS_D_INO
+-- Performing Test STRUCT_DIRENT_HAS_D_INO - Success
+-- Performing Test STRUCT_DIRENT_HAS_D_NAMLEN
+-- Performing Test STRUCT_DIRENT_HAS_D_NAMLEN - Failed
+-- Performing Test STRUCT_TIMESPEC_HAS_TV_SEC
+-- Performing Test STRUCT_TIMESPEC_HAS_TV_SEC - Success
+-- Performing Test STRUCT_TIMESPEC_HAS_TV_NSEC
+-- Performing Test STRUCT_TIMESPEC_HAS_TV_NSEC - Success
+-- Performing Test STRUCT_TM_HAS_TM_GMTOFF
+-- Performing Test STRUCT_TM_HAS_TM_GMTOFF - Success
+-- Performing Test HAVE_FALLOC_PUNCH_HOLE_AND_KEEP_SIZE
+-- Performing Test HAVE_FALLOC_PUNCH_HOLE_AND_KEEP_SIZE - Success
+-- Performing Test HAVE_VFORK
+-- Performing Test HAVE_VFORK - Success
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")
+-- Looking for crc32
+-- Looking for crc32 - found
+-- Looking for compressBound
+-- Looking for compressBound - found
+-- Looking for deflateBound
+-- Looking for deflateBound - found
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")
+-- OPENSSL_INCLUDE_DIR = /usr/include
+-- OPENSSL_SSL_LIBRARY = /usr/lib/x86_64-linux-gnu/libssl.so
+-- OPENSSL_CRYPTO_LIBRARY = /usr/lib/x86_64-linux-gnu/libcrypto.so
+-- OPENSSL_VERSION = 3.0.13
+-- SSL_LIBRARIES = /usr/lib/x86_64-linux-gnu/libssl.so;/usr/lib/x86_64-linux-gnu/libcrypto.so
+-- Looking for ERR_remove_thread_state
+-- Looking for ERR_remove_thread_state - found
+-- Looking for EVP_aes_128_ctr
+-- Looking for EVP_aes_128_ctr - found
+-- Looking for EVP_aes_128_gcm
+-- Looking for EVP_aes_128_gcm - found
+-- Looking for DES_set_key_unchecked
+-- Looking for DES_set_key_unchecked - found
+-- Looking for EVP_PKEY_get_raw_public_key
+-- Looking for EVP_PKEY_get_raw_public_key - found
+-- Looking for EVP_PKEY_CTX_set_hkdf_md
+-- Looking for EVP_PKEY_CTX_set_hkdf_md - found
+-- Check size of mbstate_t
+-- Check size of mbstate_t - done
+-- Looking for mbrlen
+-- Looking for mbrlen - found
+-- Looking for mbsrtowcs
+-- Looking for mbsrtowcs - found
+-- Looking for mbrtowc
+-- Looking for mbrtowc - found
+-- Looking for wcwidth
+-- Looking for wcwidth - found
+-- Looking for iswlower
+-- Looking for iswlower - found
+-- Looking for iswupper
+-- Looking for iswupper - found
+-- Looking for towlower
+-- Looking for towlower - found
+-- Looking for towupper
+-- Looking for towupper - found
+-- Looking for iswctype
+-- Looking for iswctype - found
+-- Check size of wchar_t
+-- Check size of wchar_t - done
+-- Check size of wctype_t
+-- Check size of wctype_t - done
+-- Check size of wint_t
+-- Check size of wint_t - done
+-- Found Curses: /usr/lib/x86_64-linux-gnu/libcurses.so
+-- Looking for tputs in /usr/lib/x86_64-linux-gnu/libcurses.so
+-- Looking for tputs in /usr/lib/x86_64-linux-gnu/libcurses.so - found
+-- Looking for setupterm in /usr/lib/x86_64-linux-gnu/libcurses.so
+-- Looking for setupterm in /usr/lib/x86_64-linux-gnu/libcurses.so - found
+-- Looking for vidattr in /usr/lib/x86_64-linux-gnu/libcurses.so
+-- Looking for vidattr in /usr/lib/x86_64-linux-gnu/libcurses.so - found
+-- Looking for include files curses.h, term.h
+-- Looking for include files curses.h, term.h - found
+-- Checking for module 'libpcre2-8'
+--   Found libpcre2-8, version 10.42
+-- Looking for pcre2_match_8 in pcre2-8
+-- Looking for pcre2_match_8 in pcre2-8 - found
+-- Looking for include file pcre2.h: /usr/include
+-- Looking for PCRE2regcomp in pcre2-posix
+-- Looking for PCRE2regcomp in pcre2-posix - not found
+-- Performing Test HAVE_SYSTEM_LIBFMT
+-- Performing Test HAVE_SYSTEM_LIBFMT - Success
+-- Looking for io_uring_mlock_size
+-- Looking for io_uring_mlock_size - found
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1")
+-- Checking for one of the modules 'libsystemd;libsystemd-daemon'
+-- Looking for sd_listen_fds in systemd
+-- Looking for sd_listen_fds in systemd - not found
+-- Looking for sd_listen_fds_with_names in systemd
+-- Looking for sd_listen_fds_with_names in systemd - not found
+-- Looking for include file systemd/sd-daemon.h
+-- Looking for include file systemd/sd-daemon.h - not found
+-- Looking for sd_notify
+-- Looking for sd_notify - not found
+-- Looking for sd_notifyf
+-- Looking for sd_notifyf - not found
+-- Systemd features not enabled
+-- Performing Test have_C__Wall
+-- Performing Test have_C__Wall - Success
+-- Performing Test have_CXX__Wall
+-- Performing Test have_CXX__Wall - Success
+-- Performing Test have_C__Wdeclaration_after_statement
+-- Performing Test have_C__Wdeclaration_after_statement - Success
+-- Performing Test have_CXX__Wdeclaration_after_statement
+-- Performing Test have_CXX__Wdeclaration_after_statement - Failed
+-- Performing Test have_C__Wenum_compare
+-- Performing Test have_C__Wenum_compare - Success
+-- Performing Test have_CXX__Wenum_compare
+-- Performing Test have_CXX__Wenum_compare - Success
+-- Performing Test have_C__Wenum_conversion
+-- Performing Test have_C__Wenum_conversion - Success
+-- Performing Test have_CXX__Wenum_conversion
+-- Performing Test have_CXX__Wenum_conversion - Success
+-- Performing Test have_C__Wextra
+-- Performing Test have_C__Wextra - Success
+-- Performing Test have_CXX__Wextra
+-- Performing Test have_CXX__Wextra - Success
+-- Performing Test have_C__Wformat_security
+-- Performing Test have_C__Wformat_security - Success
+-- Performing Test have_CXX__Wformat_security
+-- Performing Test have_CXX__Wformat_security - Success
+-- Performing Test have_C__Winconsistent_missing_override
+-- Performing Test have_C__Winconsistent_missing_override - Failed
+-- Performing Test have_CXX__Winconsistent_missing_override
+-- Performing Test have_CXX__Winconsistent_missing_override - Failed
+-- Performing Test have_C__Wmissing_braces
+-- Performing Test have_C__Wmissing_braces - Success
+-- Performing Test have_CXX__Wmissing_braces
+-- Performing Test have_CXX__Wmissing_braces - Success
+-- Performing Test have_C__Wformat_truncation
+-- Performing Test have_C__Wformat_truncation - Success
+-- Performing Test have_CXX__Wformat_truncation
+-- Performing Test have_CXX__Wformat_truncation - Success
+-- Performing Test have_C__Winit_self
+-- Performing Test have_C__Winit_self - Success
+-- Performing Test have_CXX__Winit_self
+-- Performing Test have_CXX__Winit_self - Success
+-- Performing Test have_C__Wnonnull_compare
+-- Performing Test have_C__Wnonnull_compare - Success
+-- Performing Test have_CXX__Wnonnull_compare
+-- Performing Test have_CXX__Wnonnull_compare - Success
+-- Performing Test have_C__Wnull_conversion
+-- Performing Test have_C__Wnull_conversion - Failed
+-- Performing Test have_CXX__Wnull_conversion
+-- Performing Test have_CXX__Wnull_conversion - Failed
+-- Performing Test have_C__Wunused_parameter
+-- Performing Test have_C__Wunused_parameter - Success
+-- Performing Test have_CXX__Wunused_parameter
+-- Performing Test have_CXX__Wunused_parameter - Success
+-- Performing Test have_C__Wunused_private_field
+-- Performing Test have_C__Wunused_private_field - Failed
+-- Performing Test have_CXX__Wunused_private_field
+-- Performing Test have_CXX__Wunused_private_field - Failed
+-- Performing Test have_C__Wnon_virtual_dtor
+-- Performing Test have_C__Wnon_virtual_dtor - Failed
+-- Performing Test have_CXX__Wnon_virtual_dtor
+-- Performing Test have_CXX__Wnon_virtual_dtor - Success
+-- Performing Test have_C__Woverloaded_virtual
+-- Performing Test have_C__Woverloaded_virtual - Failed
+-- Performing Test have_CXX__Woverloaded_virtual
+-- Performing Test have_CXX__Woverloaded_virtual - Success
+-- Performing Test have_C__Wvla
+-- Performing Test have_C__Wvla - Success
+-- Performing Test have_CXX__Wvla
+-- Performing Test have_CXX__Wvla - Success
+-- Performing Test have_C__Wwrite_strings
+-- Performing Test have_C__Wwrite_strings - Success
+-- Performing Test have_CXX__Wwrite_strings
+-- Performing Test have_CXX__Wwrite_strings - Success
+-- Performing Test have_C__Wcast_function_type_strict
+-- Performing Test have_C__Wcast_function_type_strict - Failed
+-- Performing Test have_CXX__Wcast_function_type_strict
+-- Performing Test have_CXX__Wcast_function_type_strict - Failed
+-- Performing Test have_C__Wframe_larger_than_16384
+-- Performing Test have_C__Wframe_larger_than_16384 - Success
+-- Performing Test have_CXX__Wframe_larger_than_16384
+-- Performing Test have_CXX__Wframe_larger_than_16384 - Success
+-- Performing Test have_CXX__Werror
+-- Performing Test have_CXX__Werror - Success
+-- Performing Test have_C__fno_operator_names
+-- Performing Test have_C__fno_operator_names - Failed
+-- Performing Test have_CXX__fno_operator_names
+-- Performing Test have_CXX__fno_operator_names - Success
+-- Performing Test have_C__Wsuggest_override
+-- Performing Test have_C__Wsuggest_override - Failed
+-- Performing Test have_CXX__Wsuggest_override
+-- Performing Test have_CXX__Wsuggest_override - Success
+== Configuring MariaDB Connector/C
+-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "8.5.0")
+-- Performing Test HAS_-Wunused_FLAG
+-- Performing Test HAS_-Wunused_FLAG - Success
+-- Performing Test HAS_-Wlogical-op_FLAG
+-- Performing Test HAS_-Wlogical-op_FLAG - Success
+-- Performing Test HAS_-Wno-uninitialized_FLAG
+-- Performing Test HAS_-Wno-uninitialized_FLAG - Success
+-- Performing Test HAS_-Wall_FLAG
+-- Performing Test HAS_-Wall_FLAG - Success
+-- Performing Test HAS_-Wextra_FLAG
+-- Performing Test HAS_-Wextra_FLAG - Success
+-- Performing Test HAS_-Wformat-security_FLAG
+-- Performing Test HAS_-Wformat-security_FLAG - Success
+-- Performing Test HAS_-Wno-init-self_FLAG
+-- Performing Test HAS_-Wno-init-self_FLAG - Success
+-- Performing Test HAS_-Wwrite-strings_FLAG
+-- Performing Test HAS_-Wwrite-strings_FLAG - Success
+-- Performing Test HAS_-Wshift-count-overflow_FLAG
+-- Performing Test HAS_-Wshift-count-overflow_FLAG - Success
+-- Performing Test HAS_-Wdeclaration-after-statement_FLAG
+-- Performing Test HAS_-Wdeclaration-after-statement_FLAG - Success
+-- Performing Test HAS_-Wno-undef_FLAG
+-- Performing Test HAS_-Wno-undef_FLAG - Success
+-- Performing Test HAS_-Wno-unknown-pragmas_FLAG
+-- Performing Test HAS_-Wno-unknown-pragmas_FLAG - Success
+-- Performing Test HAS_-Wno-stringop-truncation_FLAG
+-- Performing Test HAS_-Wno-stringop-truncation_FLAG - Success
+-- MariaDB Connector C: INSTALL_BINDIR=bin
+-- MariaDB Connector C: INSTALL_LIBDIR=lib
+-- MariaDB Connector C: INSTALL_PCDIR=lib/pkgconfig
+-- MariaDB Connector C: INSTALL_INCLUDEDIR=include/mysql
+-- MariaDB Connector C: INSTALL_DOCSDIR=
+-- MariaDB Connector C: INSTALL_PLUGINDIR=lib/plugin
+-- MariaDB Connector C: INSTALL_MANDIR=man
+-- MariaDB Connector C: LIBMARIADB_STATIC_NAME mariadbclient
+-- Found ZSTD: /usr/lib/x86_64-linux-gnu/libzstd.so
+-- Looking for include file linux/limits.h
+-- Looking for include file linux/limits.h - found
+-- Looking for include file signal.h
+-- Looking for include file signal.h - found
+-- Looking for include file ucontext.h
+-- Looking for include file ucontext.h - found
+-- Looking for makecontext
+-- Looking for makecontext - found
+-- Check size of ushort
+-- Check size of ushort - done
+-- Check size of socklen_t
+-- Check size of socklen_t - failed
+-- Looking for floor
+-- Looking for floor - not found
+-- Looking for pthread_getspecific
+-- Looking for pthread_getspecific - found
+-- Looking for gethostbyname_r
+-- Looking for gethostbyname_r - found
+-- Looking for setsockopt
+-- Looking for setsockopt - found
+-- TLS library/version: OpenSSL 3.0.13
+-- SYSTEM_LIBS /usr/lib/x86_64-linux-gnu/libz.so;dl;m;dl;m;/usr/lib/x86_64-linux-gnu/libssl.so;/usr/lib/x86_64-linux-gnu/libcrypto.so
+-- Found GSSAPI: -L/usr/lib/x86_64-linux-gnu/mit-krb5 -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl,-z,relro -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err
+-- Performing Test have__Wl___as_needed
+-- Performing Test have__Wl___as_needed - Success
+-- SYSTEM_LIBS: /usr/lib/x86_64-linux-gnu/libz.so;dl;m;dl;m;/usr/lib/x86_64-linux-gnu/libssl.so;/usr/lib/x86_64-linux-gnu/libcrypto.so;/usr/lib/x86_64-linux-gnu/libz.so
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter
+/usr/bin/python3: No module named pip
+-- SYSTEM processor: x86_64
+-- MariaDB Connector/c configuration:
+-- Static PLUGINS mysql_native_password;mysql_old_password;zlib;pvio_socket
+-- Dynamic PLUGINS dialog;client_ed25519;caching_sha2_password;sha256_password;parsec;auth_gssapi_client;mysql_clear_password;zstd
+-- Disabled PLUGINS mysql_old_password
+-- CPack generation: TGZ
+-- SSL support: OPENSSL Libs: /usr/lib/x86_64-linux-gnu/libssl.so;/usr/lib/x86_64-linux-gnu/libcrypto.so
+-- Zlib support: ON
+-- ZStd support: TRUE
+-- ASAN support: OFF
+-- ASAN scope support:
+-- UBSAN support: OFF
+-- MSAN support: OFF
+-- Installation layout: DEFAULT
+-- Include files will be installed in include/mysql
+-- Libraries will be installed in lib
+-- Binaries will be installed in bin
+-- Required: /usr/lib/x86_64-linux-gnu/libz.so;dl;m
+-- MariaDB Connector/C 3.4.10
+-- Performing Test have_C__Werror_suggest_override
+-- Performing Test have_C__Werror_suggest_override - Success
+-- Performing Test have_CXX__Werror_suggest_override
+-- Performing Test have_CXX__Werror_suggest_override - Success
+-- Performing Test have_C__Werror_restrict
+-- Performing Test have_C__Werror_restrict - Success
+-- Performing Test have_CXX__Werror_restrict
+-- Performing Test have_CXX__Werror_restrict - Success
+-- Performing Test have_C__Werror_use_after_free
+-- Performing Test have_C__Werror_use_after_free - Success
+-- Performing Test have_CXX__Werror_use_after_free
+-- Performing Test have_CXX__Werror_use_after_free - Success
+-- Performing Test have_C__Werror_maybe_uninitialized
+-- Performing Test have_C__Werror_maybe_uninitialized - Success
+-- Performing Test have_CXX__Werror_maybe_uninitialized
+-- Performing Test have_CXX__Werror_maybe_uninitialized - Success
+-- Performing Test have_C__Werror_dangling_reference
+-- Performing Test have_C__Werror_dangling_reference - Success
+-- Performing Test have_CXX__Werror_dangling_reference
+-- Performing Test have_CXX__Werror_dangling_reference - Success
+-- Performing Test have_C__Werror_dangling_pointer
+-- Performing Test have_C__Werror_dangling_pointer - Success
+-- Performing Test have_CXX__Werror_dangling_pointer
+-- Performing Test have_CXX__Werror_dangling_pointer - Success
+-- Performing Test have_C__fno_strict_aliasing
+-- Performing Test have_C__fno_strict_aliasing - Success
+-- Performing Test have_CXX__fno_strict_aliasing
+-- Performing Test have_CXX__fno_strict_aliasing - Success
+-- Performing Test have_C__Werror_calloc_transposed_args
+-- Performing Test have_C__Werror_calloc_transposed_args - Failed
+-- Performing Test have_CXX__Werror_calloc_transposed_args
+-- Performing Test have_CXX__Werror_calloc_transposed_args - Failed
+-- Performing Test have_C__fno_lto
+-- Performing Test have_C__fno_lto - Success
+-- Performing Test have_CXX__fno_lto
+-- Performing Test have_CXX__fno_lto - Success
+-- Found BISON: /usr/bin/bison (found version "3.8.2")
+-- Found LibXml2: /usr/lib/x86_64-linux-gnu/libxml2.so (found version "2.9.14")
+-- Found Snappy: /usr/lib/x86_64-linux-gnu/libsnappy.so
+-- Found LZ4: /usr/lib/x86_64-linux-gnu/liblz4.so (found version "1.9.4")
+-- Building with LZ4
+-- Could NOT find Boost: Found unsuitable version "1.83.0", but required is at least "1.88.0" (found /usr/include, found components: chrono filesystem program_options regex thread atomic)
+gcc will be used for Boost compilation with compiler GNU
+-- SERVER_BUILD_INCLUDE_DIR =
+-- SERVER_SOURCE_ROOT_DIR = /usr/local/src/mariadb-12.3.3
+== MariaDB-Columnstore 25.10.6
+-- Looking for C++ include ncurses.h
+-- Looking for C++ include ncurses.h - found
+-- Looking for C++ include netdb.h
+-- Looking for C++ include netdb.h - found
+-- Looking for C++ include syslog.h
+-- Looking for C++ include syslog.h - found
+-- Looking for C++ include sys/mount.h
+-- Looking for C++ include sys/mount.h - found
+-- Looking for C++ include sys/statfs.h
+-- Looking for C++ include sys/statfs.h - found
+-- Looking for C++ include sys/timeb.h
+-- Looking for C++ include sys/timeb.h - found
+-- Looking for C++ include values.h
+-- Looking for C++ include values.h - found
+-- Looking for C++ include vfork.h
+-- Looking for C++ include vfork.h - not found
+-- Looking for C++ include zlib.h
+-- Looking for C++ include zlib.h - found
+-- Looking for _getb67
+-- Looking for _getb67 - not found
+-- Looking for GETB67
+-- Looking for GETB67 - not found
+-- Looking for getb67
+-- Looking for getb67 - not found
+-- Looking for alarm
+-- Looking for alarm - found
+-- Looking for btowc
+-- Looking for btowc - found
+-- Looking for dup2
+-- Looking for dup2 - found
+-- Looking for error_at_line
+-- Looking for error_at_line - found
+-- Looking for floor
+-- Looking for floor - not found
+-- Looking for fork
+-- Looking for fork - found
+-- Looking for getenv
+-- Looking for getenv - found
+-- Looking for gethostbyname
+-- Looking for gethostbyname - found
+-- Looking for getpagesize
+-- Looking for getpagesize - found
+-- Looking for inet_ntoa
+-- Looking for inet_ntoa - found
+-- Looking for isascii
+-- Looking for isascii - found
+-- Looking for malloc
+-- Looking for malloc - found
+-- Looking for memchr
+-- Looking for memchr - found
+-- Looking for mempcpy
+-- Looking for mempcpy - found
+-- Looking for memset
+-- Looking for memset - found
+-- Looking for mkdir
+-- Looking for mkdir - found
+-- Looking for mktime
+-- Looking for mktime - found
+-- Looking for pow
+-- Looking for pow - not found
+-- Looking for regcomp
+-- Looking for regcomp - found
+-- Looking for rmdir
+-- Looking for rmdir - found
+-- Looking for socket
+-- Looking for socket - found
+-- Looking for stat
+-- Looking for stat - found
+-- Looking for strchr
+-- Looking for strchr - found
+-- Looking for strcspn
+-- Looking for strcspn - found
+-- Looking for strdup
+-- Looking for strdup - found
+-- Looking for strerror_r
+-- Looking for strerror_r - found
+-- Looking for strftime
+-- Looking for strftime - found
+-- Looking for strrchr
+-- Looking for strrchr - found
+-- Looking for strspn
+-- Looking for strspn - found
+-- Looking for strstr
+-- Looking for strstr - found
+-- Looking for strtod
+-- Looking for strtod - found
+-- Looking for strtol
+-- Looking for strtol - found
+-- Looking for utime
+-- Looking for utime - found
+-- Looking for wmempcpy
+-- Looking for wmempcpy - found
+-- Looking for strerror_r
+-- Looking for strerror_r - found
+-- Looking for tm
+-- Looking for tm - not found
+-- Check size of ptrdiff_t
+-- Check size of ptrdiff_t - done
+-- Check size of _Bool
+-- Check size of _Bool - done
+-- Check size of mode_t
+-- Check size of mode_t - done
+-- Check size of off_t
+-- Check size of off_t - done
+-- Check size of pid_t
+-- Check size of pid_t - done
+-- Check size of size_t
+-- Check size of size_t - done
+-- Performing Test STAT_EMPTY_STRING_BUG
+-- Performing Test STAT_EMPTY_STRING_BUG - Success
+-- Performing Test HAVE_STDBOOL_H
+-- Performing Test HAVE_STDBOOL_H - Failed
+-- Performing Test HAVE_UTIME_NULL
+-- Performing Test HAVE_UTIME_NULL - Success
+-- Performing Test HAVE_WORKING_FORK
+-- Performing Test HAVE_WORKING_FORK - Success
+-- Performing Test HAVE_WORKING_VFORK
+-- Performing Test HAVE_WORKING_VFORK - Success
+-- Performing Test RET_SIGNAL_TYPES
+-- Performing Test RET_SIGNAL_TYPES - Failed
+-- Performing Test LSTAT_FOLLOWS_SLASHED_SYMLINK
+-- Performing Test LSTAT_FOLLOWS_SLASHED_SYMLINK - Success
+-- Performing Test SELECT_ARGS
+-- Performing Test SELECT_ARGS - Success
+-- Performing Test STATS_MACROS_CHECK
+-- Performing Test STATS_MACROS_CHECK - Success
+-- Performing Test STRERROR_R_CHAR_P
+-- Performing Test STRERROR_R_CHAR_P - Success
+-- Performing Test CONST_CONFORM_CHECK
+-- Performing Test CONST_CONFORM_CHECK - Success
+-- Performing Test WORKING_VOLATILE
+-- Performing Test WORKING_VOLATILE - Success
+-- Performing Test RESTRICT_CHECK
+-- Performing Test RESTRICT_CHECK - Success
+-- Performing Test INLINE
+-- Performing Test INLINE - Failed
+-- Performing Test MASK_LONGDOUBLE
+-- Performing Test MASK_LONGDOUBLE - Success
+-- Performing Test have_CXX__std_c__2a
+-- Performing Test have_CXX__std_c__2a - Success
+-- ColumnStore: Compiling with COMMUNITY features
+-- Performing Test have_C__DMASK_LONGDOUBLE
+-- Performing Test have_C__DMASK_LONGDOUBLE - Success
+-- Performing Test have_CXX__DMASK_LONGDOUBLE
+-- Performing Test have_CXX__DMASK_LONGDOUBLE - Success
+-- Performing Test have_C__fsigned_char
+-- Performing Test have_C__fsigned_char - Success
+-- Performing Test have_CXX__fsigned_char
+-- Performing Test have_CXX__fsigned_char - Success
+-- Performing Test have_C__msse4.2
+-- Performing Test have_C__msse4.2 - Success
+-- Performing Test have_CXX__msse4.2
+-- Performing Test have_CXX__msse4.2 - Success
+-- Performing Test have_C__DHAVE_CONFIG_H
+-- Performing Test have_C__DHAVE_CONFIG_H - Success
+-- Performing Test have_CXX__DHAVE_CONFIG_H
+-- Performing Test have_CXX__DHAVE_CONFIG_H - Success
+-- Performing Test have_C__DBOOST_BIND_GLOBAL_PLACEHOLDERS
+-- Performing Test have_C__DBOOST_BIND_GLOBAL_PLACEHOLDERS - Success
+-- Performing Test have_CXX__DBOOST_BIND_GLOBAL_PLACEHOLDERS
+-- Performing Test have_CXX__DBOOST_BIND_GLOBAL_PLACEHOLDERS - Success
+-- Performing Test have_C__O0
+-- Performing Test have_C__O0 - Success
+-- Performing Test have_CXX__O0
+-- Performing Test have_CXX__O0 - Success
+-- Performing Test have_C__D_DEBUG
+-- Performing Test have_C__D_DEBUG - Success
+-- Performing Test have_CXX__D_DEBUG
+-- Performing Test have_CXX__D_DEBUG - Success
+-- Performing Test have_C__O3
+-- Performing Test have_C__O3 - Success
+-- Performing Test have_CXX__O3
+-- Performing Test have_CXX__O3 - Success
+-- Performing Test have_C__DDBUG_OFF
+-- Performing Test have_C__DDBUG_OFF - Success
+-- Performing Test have_CXX__DDBUG_OFF
+-- Performing Test have_CXX__DDBUG_OFF - Success
+-- Performing Test have_C__Wdeprecated_copy
+-- Performing Test have_C__Wdeprecated_copy - Failed
+-- Performing Test have_CXX__Wdeprecated_copy
+-- Performing Test have_CXX__Wdeprecated_copy - Success
+-- Performing Test have_C__Wdeprecated_declarations
+-- Performing Test have_C__Wdeprecated_declarations - Success
+-- Performing Test have_CXX__Wdeprecated_declarations
+-- Performing Test have_CXX__Wdeprecated_declarations - Success
+-- Performing Test have_C__Wregister
+-- Performing Test have_C__Wregister - Failed
+-- Performing Test have_CXX__Wregister
+-- Performing Test have_CXX__Wregister - Success
+Adding plugin via MariaDB plugin API
+-- Performing Test have_C__Wmissing_declarations
+-- Performing Test have_C__Wmissing_declarations - Success
+-- Performing Test have_CXX__Wmissing_declarations
+-- Performing Test have_CXX__Wmissing_declarations - Success
+-- Performing Test have_C__Werror_unused_function
+-- Performing Test have_C__Werror_unused_function - Success
+-- Performing Test have_CXX__Werror_unused_function
+-- Performing Test have_CXX__Werror_unused_function - Success
+-- Performing Test have_C__Wunused_function
+-- Performing Test have_C__Wunused_function - Success
+-- Performing Test have_CXX__Wunused_function
+-- Performing Test have_CXX__Wunused_function - Success
+-- Performing Test have_C__Werror_unused_variable
+-- Performing Test have_C__Werror_unused_variable - Success
+-- Performing Test have_CXX__Werror_unused_variable
+-- Performing Test have_CXX__Werror_unused_variable - Success
+-- Performing Test have_C__Wunused_variable
+-- Performing Test have_C__Wunused_variable - Success
+-- Performing Test have_CXX__Wunused_variable
+-- Performing Test have_CXX__Wunused_variable - Success
+-- Performing Test have_C__Werror_unused_value
+-- Performing Test have_C__Werror_unused_value - Success
+-- Performing Test have_CXX__Werror_unused_value
+-- Performing Test have_CXX__Werror_unused_value - Success
+-- Performing Test have_C__Wunused_value
+-- Performing Test have_C__Wunused_value - Success
+-- Performing Test have_CXX__Wunused_value
+-- Performing Test have_CXX__Wunused_value - Success
+-- Performing Test have_C__Werror_parentheses
+-- Performing Test have_C__Werror_parentheses - Success
+-- Performing Test have_CXX__Werror_parentheses
+-- Performing Test have_CXX__Werror_parentheses - Success
+-- Performing Test have_C__Wparentheses
+-- Performing Test have_C__Wparentheses - Success
+-- Performing Test have_CXX__Wparentheses
+-- Performing Test have_CXX__Wparentheses - Success
+-- Performing Test have_C__Werror_strict_aliasing
+-- Performing Test have_C__Werror_strict_aliasing - Success
+-- Performing Test have_CXX__Werror_strict_aliasing
+-- Performing Test have_CXX__Werror_strict_aliasing - Success
+-- Performing Test have_C__Wstrict_aliasing
+-- Performing Test have_C__Wstrict_aliasing - Success
+-- Performing Test have_CXX__Wstrict_aliasing
+-- Performing Test have_CXX__Wstrict_aliasing - Success
+-- Performing Test have_C__Werror_misleading_indentation
+-- Performing Test have_C__Werror_misleading_indentation - Success
+-- Performing Test have_CXX__Werror_misleading_indentation
+-- Performing Test have_CXX__Werror_misleading_indentation - Success
+-- Performing Test have_C__Wmisleading_indentation
+-- Performing Test have_C__Wmisleading_indentation - Success
+-- Performing Test have_CXX__Wmisleading_indentation
+-- Performing Test have_CXX__Wmisleading_indentation - Success
+-- Performing Test have_C__Werror_format_truncation
+-- Performing Test have_C__Werror_format_truncation - Success
+-- Performing Test have_CXX__Werror_format_truncation
+-- Performing Test have_CXX__Werror_format_truncation - Success
+-- Performing Test have_C__Werror_implicit_fallthrough
+-- Performing Test have_C__Werror_implicit_fallthrough - Success
+-- Performing Test have_CXX__Werror_implicit_fallthrough
+-- Performing Test have_CXX__Werror_implicit_fallthrough - Success
+-- Performing Test have_C__Wimplicit_fallthrough
+-- Performing Test have_C__Wimplicit_fallthrough - Success
+-- Performing Test have_CXX__Wimplicit_fallthrough
+-- Performing Test have_CXX__Wimplicit_fallthrough - Success
+-- Performing Test have_C__Werror_type_limits
+-- Performing Test have_C__Werror_type_limits - Success
+-- Performing Test have_CXX__Werror_type_limits
+-- Performing Test have_CXX__Werror_type_limits - Success
+-- Performing Test have_C__Wtype_limits
+-- Performing Test have_C__Wtype_limits - Success
+-- Performing Test have_CXX__Wtype_limits
+-- Performing Test have_CXX__Wtype_limits - Success
+-- Performing Test have_C__Werror_deprecated_declarations
+-- Performing Test have_C__Werror_deprecated_declarations - Success
+-- Performing Test have_CXX__Werror_deprecated_declarations
+-- Performing Test have_CXX__Werror_deprecated_declarations - Success
+-- Could NOT find Java (missing: Java_JAVA_EXECUTABLE Java_JAR_EXECUTABLE Java_JAVAC_EXECUTABLE Java_JAVAH_EXECUTABLE Java_JAVADOC_EXECUTABLE) (Required is at least version "1.6")
+-- Could NOT find JNI (missing: JAVA_INCLUDE_PATH JAVA_INCLUDE_PATH2 AWT JVM)
+-- Performing Test have_CXX__std_c__17
+-- Performing Test have_CXX__std_c__17 - Success
+-- === Building DuckDB from submodule (/usr/local/src/mariadb-12.3.3/storage/duckdb/third_parties/duckdb) ===
+-- Performing Test have_CXX__Wsfinae_incomplete
+-- Performing Test have_CXX__Wsfinae_incomplete - Failed
+-- DuckDB include: /usr/local/src/mariadb-12.3.3/storage/duckdb/third_parties/duckdb/src/include
+-- DuckDB libs:    /usr/local/src/mariadb-12.3.3/build_tmp_dir/storage/duckdb/duckdb-build/src/libduckdb_static.a;/usr/local/src/mariadb-12.3.3/build_tmp_dir/storage/duckdb/duckdb-build/extension/libduckdb_generated_extension_loader.a;/usr/local/src/mariadb-12.3.3/build_tmp_dir/storage/duckdb/duckdb-build/extension/core_functions/libcore_functions_extension.a;/usr/local/src/mariadb-12.3.3/build_tmp_dir/storage/duckdb/duckdb-build/extension/icu/libicu_extension.a;/usr/local/src/mariadb-12.3.3/build_tmp_dir/storage/duckdb/duckdb-build/extension/parquet/libparquet_extension.a;/usr/local/src/mariadb-12.3.3/build_tmp_dir/storage/duckdb/duckdb-build/extension/json/libjson_extension.a
+-- Looking for include file numa.h
+-- Looking for include file numa.h - found
+-- Looking for include file numaif.h
+-- Looking for include file numaif.h - found
+-- Performing Test HAVE_LIBNUMA
+-- Performing Test HAVE_LIBNUMA - Success
+-- WITH_NUMA=AUTO: NUMA memory allocation policy enabled
+-- Looking for regcomp
+-- Looking for regcomp - found
+-- Performing Test have_C__Wframe_larger_than_49152
+-- Performing Test have_C__Wframe_larger_than_49152 - Success
+-- Performing Test have_CXX__Wframe_larger_than_49152
+-- Performing Test have_CXX__Wframe_larger_than_49152 - Success
+-- Performing Test have_C__Werror_unused_but_set_variable
+-- Performing Test have_C__Werror_unused_but_set_variable - Success
+-- Performing Test have_CXX__Werror_unused_but_set_variable
+-- Performing Test have_CXX__Werror_unused_but_set_variable - Success
+-- Performing Test have_C__Wpointer_sign
+-- Performing Test have_C__Wpointer_sign - Success
+-- Performing Test have_CXX__Wpointer_sign
+-- Performing Test have_CXX__Wpointer_sign - Failed
+-- Performing Test have_C__Wformat
+-- Performing Test have_C__Wformat - Success
+-- Performing Test have_CXX__Wformat
+-- Performing Test have_CXX__Wformat - Success
+-- Performing Test have_C__Wstrict_aliasing_2
+-- Performing Test have_C__Wstrict_aliasing_2 - Success
+-- Performing Test have_CXX__Wstrict_aliasing_2
+-- Performing Test have_CXX__Wstrict_aliasing_2 - Success
+-- Performing Test have_C__Wdisabled_optimization
+-- Performing Test have_C__Wdisabled_optimization - Success
+-- Performing Test have_CXX__Wdisabled_optimization
+-- Performing Test have_CXX__Wdisabled_optimization - Success
+-- Performing Test have_C__Wfloat_equal
+-- Performing Test have_C__Wfloat_equal - Success
+-- Performing Test have_CXX__Wfloat_equal
+-- Performing Test have_CXX__Wfloat_equal - Success
+-- Performing Test have_C__Wpointer_arith
+-- Performing Test have_C__Wpointer_arith - Success
+-- Performing Test have_CXX__Wpointer_arith
+-- Performing Test have_CXX__Wpointer_arith - Success
+-- Performing Test have_C__Wbad_function_cast
+-- Performing Test have_C__Wbad_function_cast - Success
+-- Performing Test have_CXX__Wbad_function_cast
+-- Performing Test have_CXX__Wbad_function_cast - Failed
+-- Performing Test have_C__Wcast_align
+-- Performing Test have_C__Wcast_align - Success
+-- Performing Test have_CXX__Wcast_align
+-- Performing Test have_CXX__Wcast_align - Success
+-- Performing Test have_C__fexceptions
+-- Performing Test have_C__fexceptions - Success
+-- Performing Test have_CXX__fexceptions
+-- Performing Test have_CXX__fexceptions - Success
+-- Performing Test have_C__fimplicit_templates
+-- Performing Test have_C__fimplicit_templates - Failed
+-- Performing Test have_CXX__fimplicit_templates
+-- Performing Test have_CXX__fimplicit_templates - Success
+-- Performing Test have_C__Wsign_compare
+-- Performing Test have_C__Wsign_compare - Success
+-- Performing Test have_CXX__Wsign_compare
+-- Performing Test have_CXX__Wsign_compare - Success
+-- Performing Test have_C__Wmissing_field_initializers
+-- Performing Test have_C__Wmissing_field_initializers - Success
+-- Performing Test have_CXX__Wmissing_field_initializers
+-- Performing Test have_CXX__Wmissing_field_initializers - Success
+-- Looking for errno.h
+-- Looking for errno.h - found
+-- Looking for signal.h
+-- Looking for signal.h - found
+-- Looking for sys/sysctl.h
+-- Looking for sys/sysctl.h - not found
+-- Looking for _gmtime64_s
+-- Looking for _gmtime64_s - not found
+-- Looking for _localtime64_s
+-- Looking for _localtime64_s - not found
+-- Looking for _strtoui64
+-- Looking for _strtoui64 - not found
+-- Looking for strncasecmp
+-- Looking for strncasecmp - found
+-- Looking for fpclassify
+-- Looking for fpclassify - found
+-- Looking for backtrace in execinfo
+-- Looking for backtrace in execinfo - not found
+-- Looking for clock_gettime in rt
+-- Looking for clock_gettime in rt - found
+-- Looking for __cxa_begin_catch in stdc++
+-- Looking for __cxa_begin_catch in stdc++ - found
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_mutex_init in pthread
+-- Looking for pthread_mutex_init in pthread - found
+-- Looking for pthread_mutexattr_setpshared
+-- Looking for pthread_mutexattr_setpshared - found
+-- Looking for pthread_condattr_setpshared
+-- Looking for pthread_condattr_setpshared - found
+-- Looking for sys/epoll.h
+-- Looking for sys/epoll.h - found
+-- Looking for epoll_create
+-- Looking for epoll_create - found
+-- Looking for compress in z
+-- Looking for compress in z - found
+-- Checking for module 'kytea'
+--   Package 'kytea', required by 'virtual:world', not found
+-- Looking for libstemmer.h
+-- Looking for libstemmer.h - not found
+-- Looking for sb_stemmer_list in stemmer
+-- Looking for sb_stemmer_list in stemmer - not found
+-- Checking for module 'libzmq'
+--   Package 'libzmq', required by 'virtual:world', not found
+-- Looking for event_init in event
+-- Looking for event_init in event - found
+-- Checking for module 'msgpack'
+--   Package 'msgpack', required by 'virtual:world', not found
+-- Looking for msgpack_version in msgpack
+-- Looking for msgpack_version in msgpack - not found
+-- Configuring OQGraph
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found suitable version "1.83.0", minimum required is "1.40.0")
+-- Found libjudy: /usr/lib/x86_64-linux-gnu/libJudy.so
+-- Performing Test HAVE_PTHREAD_THREADID_NP
+-- Performing Test HAVE_PTHREAD_THREADID_NP - Failed
+-- Looking for gettid
+-- Looking for gettid - not found
+-- Performing Test HAVE_SYS_GETTID
+-- Performing Test HAVE_SYS_GETTID - Success
+-- Performing Test HAVE_GETTHRID
+-- Performing Test HAVE_GETTHRID - Failed
+-- Performing Test HAVE_PTHREAD_GETTHREADID_NP
+-- Performing Test HAVE_PTHREAD_GETTHREADID_NP - Failed
+-- Performing Test HAVE_INTEGER_PTHREAD_SELF
+-- Performing Test HAVE_INTEGER_PTHREAD_SELF - Success
+-- Performing Test have_C__Wrange_loop_construct
+-- Performing Test have_C__Wrange_loop_construct - Failed
+-- Performing Test have_CXX__Wrange_loop_construct
+-- Performing Test have_CXX__Wrange_loop_construct - Success
+-- Performing Test have_C__Winvalid_offsetof
+-- Performing Test have_C__Winvalid_offsetof - Failed
+-- Performing Test have_CXX__Winvalid_offsetof
+-- Performing Test have_CXX__Winvalid_offsetof - Success
+-- Performing Test have_C__Weffc__
+-- Performing Test have_C__Weffc__ - Failed
+-- Performing Test have_CXX__Weffc__
+-- Performing Test have_CXX__Weffc__ - Success
+-- Looking for timer_delete in rt
+-- Looking for timer_delete in rt - found
+-- Looking for sched_getcpu
+-- Looking for sched_getcpu - found
+-- Looking for getauxval
+-- Looking for getauxval - found
+-- Performing Test HAVE_THREAD_LOCAL
+-- Performing Test HAVE_THREAD_LOCAL - Success
+-- Found LZ4: /usr/lib/x86_64-linux-gnu/liblz4.so
+-- Found BZip2: /usr/lib/x86_64-linux-gnu/libbz2.so
+-- Found Snappy: /usr/lib/x86_64-linux-gnu/libsnappy.so
+-- Looking for ZDICT_trainFromBuffer
+-- Looking for ZDICT_trainFromBuffer - found
+-- Found ZSTD: /usr/lib/x86_64-linux-gnu/libzstd.so
+-- Performing Test HAVE_FALLOCATE
+-- Performing Test HAVE_FALLOCATE - Success
+-- Looking for malloc_usable_size
+-- Looking for malloc_usable_size - found
+-- Performing Test HAVE_SSE42
+-- Performing Test HAVE_SSE42 - Success
+-- Looking for krb5_xfree
+-- Looking for krb5_xfree - not found
+-- Performing Test have_C__Wl___as_needed
+-- Performing Test have_C__Wl___as_needed - Success
+-- Performing Test have_CXX__Wl___as_needed
+-- Performing Test have_CXX__Wl___as_needed - Success
+-- Looking for include file security/pam_ext.h
+-- Looking for include file security/pam_ext.h - found
+-- Looking for include file security/pam_appl.h
+-- Looking for include file security/pam_appl.h - found
+-- Looking for strndup
+-- Looking for strndup - found
+-- Looking for getgrouplist
+-- Looking for getgrouplist - found
+-- Performing Test HAVE_POSIX_GETGROUPLIST
+-- Performing Test HAVE_POSIX_GETGROUPLIST - Success
+-- Looking for pam_syslog
+-- Looking for pam_syslog - found
+-- Performing Test HAVE_PEERCRED
+-- Performing Test HAVE_PEERCRED - Success
+-- Can't build aws_key_management - AWS SDK not available (AWS_SDK_EXTERNAL_PROJECT is not ON and aws-cpp-sdk-kms not found)
+-- Looking for FascistCheckUser in crack
+-- Looking for FascistCheckUser in crack - not found
+-- Looking for include file crack.h
+-- Looking for include file crack.h - not found
+-- Looking for getmntent
+-- Looking for getmntent - found
+-- Looking for getmntent
+-- Looking for getmntent - not found
+-- Looking for setmntent
+-- Looking for setmntent - found
+-- Looking for getmntinfo
+-- Looking for getmntinfo - not found
+-- Looking for include file sys/mntent.h
+-- Looking for include file sys/mntent.h - not found
+-- Found BZip2: /usr/lib/x86_64-linux-gnu/libbz2.so (found version "1.0.8")
+-- Found LZ4: /usr/lib/x86_64-linux-gnu/liblz4.so (found suitable version "1.9.4", minimum required is "1.6")
+-- Looking for lzma_auto_decoder in /usr/lib/x86_64-linux-gnu/liblzma.so
+-- Looking for lzma_auto_decoder in /usr/lib/x86_64-linux-gnu/liblzma.so - found
+-- Looking for lzma_easy_encoder in /usr/lib/x86_64-linux-gnu/liblzma.so
+-- Looking for lzma_easy_encoder in /usr/lib/x86_64-linux-gnu/liblzma.so - found
+-- Looking for lzma_lzma_preset in /usr/lib/x86_64-linux-gnu/liblzma.so
+-- Looking for lzma_lzma_preset in /usr/lib/x86_64-linux-gnu/liblzma.so - found
+-- Found LibLZMA: /usr/lib/x86_64-linux-gnu/liblzma.so (found version "5.4.5")
+-- Found LZO: /usr/lib/x86_64-linux-gnu/liblzo2.so
+-- Looking for event.h
+-- Looking for event.h - found
+-- Performing Test have_CXX__Wno_unused_but_set_variable
+-- Performing Test have_CXX__Wno_unused_but_set_variable - Success
+The following features have been enabled:
+
+ * WSREP, Server plugin STATIC
+ * ARCHIVE, Storage Engine MODULE
+ * BLACKHOLE, Storage Engine MODULE
+ * CONNECT_VCT, Support for VCT in the CONNECT storage engine
+ * CONNECT_LIBXML2, Support for LIBXML2 in the CONNECT storage engine
+ * CONNECT_ZIP, Support for ZIP in the CONNECT storage engine
+ * CONNECT_REST, Support for REST API in the CONNECT storage engine
+ * CONNECT_XMAP, Support for index file mapping in the CONNECT storage engine
+ * CONNECT, Storage Engine MODULE
+ * CSV, Storage Engine STATIC
+ * DUCKDB, Storage Engine MODULE
+ * EXAMPLE, Storage Engine MODULE
+ * FEDERATED, Storage Engine MODULE
+ * FEDERATEDX, Storage Engine MODULE
+ * HEAP, Storage Engine STATIC
+ * NUMA, NUMA memory allocation policy
+ * INNODB_AHI, InnoDB Adaptive Hash Index
+ * INNODB_ROOT_GUESS, Cache index root block descriptors in InnoDB
+ * INNOBASE, Storage Engine STATIC
+ * MARIABACKUP, MariaDB Backup Utility
+ * ARIA, Storage Engine STATIC
+ * S3, Storage Engine MODULE
+ * MROONGA, Storage Engine MODULE
+ * MYISAM, Storage Engine STATIC
+ * MYISAMMRG, Storage Engine STATIC
+ * OQGRAPH, Storage Engine MODULE
+ * PERFSCHEMA, Storage Engine STATIC
+ * ROCKSDB, Storage Engine MODULE
+ * ROCKSDB_LZ4, LZ4 Compression in the RocksDB storage engine
+ * ROCKSDB_BZip2, BZip2 Compression in the RocksDB storage engine
+ * ROCKSDB_Snappy, Snappy Compression in the RocksDB storage engine
+ * ROCKSDB_ZSTD, ZSTD Compression in the RocksDB storage engine
+ * ROCKSDB_ZLIB, zlib Compression in the RocksDB storage engine
+ * SEQUENCE, Storage Engine STATIC
+ * SPHINX, Storage Engine MODULE
+ * SPIDER, Storage Engine MODULE
+ * TEST_SQL_DISCOVERY, Storage Engine MODULE
+ * VIDEX, Storage Engine MODULE
+ * AUDIT_NULL, Server plugin MODULE
+ * AUTH_ED25519, Server plugin MODULE
+ * DIALOG_EXAMPLES, Server plugin MODULE
+ * AUTH_TEST_PLUGIN, Server plugin MODULE
+ * QA_AUTH_INTERFACE, Server plugin MODULE
+ * QA_AUTH_SERVER, Server plugin MODULE
+ * QA_AUTH_CLIENT, Server plugin MODULE
+ * AUTH_0X0100, Server plugin MODULE
+ * AUTH_GSSAPI, Server plugin MODULE
+ * AUTH_MYSQL_SHA2, Server plugin MODULE
+ * AUTH_PAM_V1, Server plugin MODULE
+ * AUTH_PAM, Server plugin MODULE
+ * AUTH_PARSEC, Server plugin MODULE
+ * AUTH_SOCKET, Server plugin STATIC
+ * DAEMON_EXAMPLE, Server plugin MODULE
+ * DEBUG_KEY_MANAGEMENT, Server plugin MODULE
+ * DISKS, Server plugin MODULE
+ * EXAMPLE_KEY_MANAGEMENT, Server plugin MODULE
+ * FEEDBACK, Server plugin STATIC
+ * FILE_KEY_MANAGEMENT, Server plugin MODULE
+ * FTEXAMPLE, Server plugin MODULE
+ * FUNC_TEST, Server plugin MODULE
+ * HANDLERSOCKET, Server plugin MODULE
+ * HASHICORP_KEY_MANAGEMENT, Hashicorp Key Management Plugin
+ * LOCALES, Server plugin MODULE
+ * METADATA_LOCK_INFO, Server plugin MODULE
+ * PASSWORD_REUSE_CHECK, Server plugin MODULE
+ * PROVIDER_BZIP2, Server plugin MODULE
+ * PROVIDER_LZ4, Server plugin MODULE
+ * PROVIDER_LZMA, Server plugin MODULE
+ * PROVIDER_LZO, Server plugin MODULE
+ * PROVIDER_SNAPPY, Server plugin MODULE
+ * QUERY_CACHE_INFO, Server plugin MODULE
+ * QUERY_RESPONSE_TIME, Server plugin MODULE
+ * SERVER_AUDIT, Server plugin MODULE
+ * SIMPLE_PASSWORD_CHECK, Server plugin MODULE
+ * SQL_ERRLOG, Server plugin MODULE
+ * TEST_SQL_SERVICE, Server plugin MODULE
+ * TYPE_ASSOC_ARRAY, Server plugin STATIC
+ * TYPE_CURSOR, Server plugin STATIC
+ * TYPE_GEOM, Server plugin STATIC
+ * TYPE_INET, Server plugin STATIC
+ * TYPE_MYSQL_JSON, Server plugin MODULE
+ * TYPE_MYSQL_TIMESTAMP, Server plugin MODULE
+ * TYPE_TEST, Server plugin MODULE
+ * TYPE_UUID, Server plugin STATIC
+ * TYPE_XMLTYPE, Server plugin STATIC
+ * USER_VARIABLES, Server plugin STATIC
+ * USERSTAT, Server plugin STATIC
+ * TEST_VERSIONING, Server plugin MODULE
+ * WSREP_INFO, Server plugin MODULE
+ * WSREP_PROVIDER, Server plugin STATIC
+ * THREAD_POOL_INFO, Server plugin STATIC
+ * PARTITION, Storage Engine STATIC
+ * SQL_SEQUENCE, Storage Engine STATIC
+ * ONLINE_ALTER_LOG, Storage Engine STATIC
+
+-- The following OPTIONAL packages have been found:
+
+ * ZLIB
+ * Python3
+ * LibXml2
+ * Boost (required version >= 1.40.0)
+   Required for the OQGraph storage engine
+ * Judy
+   Required for the OQGraph storage engine
+ * GSSAPI
+ * BZip2
+ * LZ4 (required version >= 1.6)
+ * LibLZMA
+ * LZO
+ * Snappy
+ * BISON (required version >= 2.4)
+
+-- The following RECOMMENDED packages have been found:
+
+ * OpenSSL
+
+-- The following REQUIRED packages have been found:
+
+ * Curses
+ * Threads
+ * CURL
+
+-- The following features have been disabled:
+
+ * LIBWRAP, Support for tcp wrappers
+ * SYSTEMD, Systemd scripts and notification support
+ * COLUMNSTORE, Storage Engine
+ * CONNECT_ODBC, Support for ODBC in the CONNECT storage engine
+ * CONNECT_JDBC, Support for JDBC in the CONNECT storage engine
+ * CONNECT_MONGODB, Support for MongoDB in the CONNECT storage engine
+ * INNODB_EXTRA_DEBUG, Extra InnoDB debug checks
+ * AWS_KEY_MANAGEMENT, AWS Encryption Key Management Plugin
+ * EMBEDDED_SERVER, Embedded MariaDB Server Library
+
+-- The following OPTIONAL packages have not been found:
+
+ * Java (required version >= 1.6)
+   Required for the CONNECT_JDBC feature
+ * JNI
+   Required for the CONNECT_JDBC feature
+
+-- Configuring done (43.5s)
+-- Generating done (0.6s)
+-- Build files have been written to: /usr/local/src/mariadb-12.3.3/build_tmp_dir
+-- Cache values
+// path to the awk executable
+AWK_EXECUTABLE:FILEPATH=/usr/bin/awk
+
+// Allow to download and build AWS C++ SDK
+AWS_SDK_EXTERNAL_PROJECT:BOOL=OFF
+
+// path to the bison executable
+BISON_EXECUTABLE:FILEPATH=/usr/bin/bison
+
+// Path to a file.
+BZIP2_INCLUDE_DIR:PATH=/usr/include
+
+// Path to a library.
+BZIP2_LIBRARY_DEBUG:FILEPATH=BZIP2_LIBRARY_DEBUG-NOTFOUND
+
+// Path to a library.
+BZIP2_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libbz2.so
+
+// Boost atomic library (debug)
+Boost_ATOMIC_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_atomic.so
+
+// Boost atomic library (release)
+Boost_ATOMIC_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_atomic.so
+
+// Boost chrono library (debug)
+Boost_CHRONO_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_chrono.so
+
+// Boost chrono library (release)
+Boost_CHRONO_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_chrono.so
+
+// The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0
+
+// Boost filesystem library (debug)
+Boost_FILESYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+
+// Boost filesystem library (release)
+Boost_FILESYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+
+// Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+// Boost library directory DEBUG
+Boost_LIBRARY_DIR_DEBUG:PATH=/usr/lib/x86_64-linux-gnu
+
+// Boost library directory RELEASE
+Boost_LIBRARY_DIR_RELEASE:PATH=/usr/lib/x86_64-linux-gnu
+
+// Boost program_options library (debug)
+Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_program_options.so
+
+// Boost program_options library (release)
+Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_program_options.so
+
+// Boost regex library (debug)
+Boost_REGEX_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_regex.so
+
+// Boost regex library (release)
+Boost_REGEX_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_regex.so
+
+// Boost thread library (debug)
+Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
+
+// Boost thread library (release)
+Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
+
+// path to the executable
+CAT_EXECUTABLE:FILEPATH=/usr/bin/cat
+
+// Path to a program.
+CHECKMODULE:FILEPATH=CHECKMODULE-NOTFOUND
+
+// Path to a program.
+CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
+
+// Path to a program.
+CMAKE_AR:FILEPATH=/usr/bin/ar
+
+// Choose the type of build, options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel
+CMAKE_BUILD_TYPE:STRING=RelWithDebInfo
+
+// Enable/Disable color output during build.
+CMAKE_COLOR_MAKEFILE:BOOL=ON
+
+// CXX compiler
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+
+// A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler
+CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-13
+
+// A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-13
+
+// Flags used by the CXX compiler during all build types.
+CMAKE_CXX_FLAGS:STRING=
+
+// Flags used by the CXX compiler during DEBUG builds.
+CMAKE_CXX_FLAGS_DEBUG:STRING=-g
+
+// Flags used by the CXX compiler during MINSIZEREL builds.
+CMAKE_CXX_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+
+// Flags used by the CXX compiler during RELEASE builds.
+CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+
+// Flags used by the CXX compiler during RELWITHDEBINFO builds.
+CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
+// C compiler
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+
+// A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler
+CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-13
+
+// A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-13
+
+// Flags used by the C compiler during all build types.
+CMAKE_C_FLAGS:STRING=
+
+// Flags used by the C compiler during DEBUG builds.
+CMAKE_C_FLAGS_DEBUG:STRING=-g
+
+// Flags used by the C compiler during MINSIZEREL builds.
+CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+
+// Flags used by the C compiler during RELEASE builds.
+CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+
+// Flags used by the C compiler during RELWITHDEBINFO builds.
+CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
+// Path to a program.
+CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
+
+// Flags used by the linker during all build types.
+CMAKE_EXE_LINKER_FLAGS:STRING=
+
+// Flags used by the linker during DEBUG builds.
+CMAKE_EXE_LINKER_FLAGS_DEBUG:STRING=
+
+// Flags used by the linker during MINSIZEREL builds.
+CMAKE_EXE_LINKER_FLAGS_MINSIZEREL:STRING=
+
+// Flags used by the linker during RELEASE builds.
+CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
+
+// Flags used by the linker during RELWITHDEBINFO builds.
+CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
+
+// Enable/Disable output of compile commands during generation.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
+
+// install prefix
+CMAKE_INSTALL_PREFIX:PATH=/usr/local/mysql
+
+// Path to a program.
+CMAKE_LINKER:FILEPATH=/usr/bin/ld
+
+// Path to a program.
+CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/gmake
+
+// Flags used by the linker during the creation of modules during all build types.
+CMAKE_MODULE_LINKER_FLAGS:STRING=
+
+// Flags used by the linker during the creation of modules during DEBUG builds.
+CMAKE_MODULE_LINKER_FLAGS_DEBUG:STRING=
+
+// Flags used by the linker during the creation of modules during MINSIZEREL builds.
+CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL:STRING=
+
+// Flags used by the linker during the creation of modules during RELEASE builds.
+CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
+
+// Flags used by the linker during the creation of modules during RELWITHDEBINFO builds.
+CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
+
+// Path to a program.
+CMAKE_NM:FILEPATH=/usr/bin/nm
+
+// Path to a program.
+CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
+
+// Path to a program.
+CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
+
+// Path to a program.
+CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
+
+// Path to a program.
+CMAKE_READELF:FILEPATH=/usr/bin/readelf
+
+// Flags used by the linker during the creation of shared libraries during all build types.
+CMAKE_SHARED_LINKER_FLAGS:STRING=
+
+// Flags used by the linker during the creation of shared libraries during DEBUG builds.
+CMAKE_SHARED_LINKER_FLAGS_DEBUG:STRING=
+
+// Flags used by the linker during the creation of shared libraries during MINSIZEREL builds.
+CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL:STRING=
+
+// Flags used by the linker during the creation of shared libraries during RELEASE builds.
+CMAKE_SHARED_LINKER_FLAGS_RELEASE:STRING=
+
+// Flags used by the linker during the creation of shared libraries during RELWITHDEBINFO builds.
+CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO:STRING=
+
+// If set, runtime paths are not added when installing shared libraries, but are added when building.
+CMAKE_SKIP_INSTALL_RPATH:BOOL=NO
+
+// If set, runtime paths are not added when using shared libraries.
+CMAKE_SKIP_RPATH:BOOL=NO
+
+// Flags used by the linker during the creation of static libraries during all build types.
+CMAKE_STATIC_LINKER_FLAGS:STRING=
+
+// Flags used by the linker during the creation of static libraries during DEBUG builds.
+CMAKE_STATIC_LINKER_FLAGS_DEBUG:STRING=
+
+// Flags used by the linker during the creation of static libraries during MINSIZEREL builds.
+CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL:STRING=
+
+// Flags used by the linker during the creation of static libraries during RELEASE builds.
+CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
+
+// Flags used by the linker during the creation of static libraries during RELWITHDEBINFO builds.
+CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
+
+// Path to a program.
+CMAKE_STRIP:FILEPATH=/usr/bin/strip
+
+// Path to a program.
+CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
+
+// If this value is on, makefiles will be generated without the .SILENT directive, and all commands will be echoed to the console during the make.  This is useful for debugging only. With Visual Studio IDE projects all commands are done without /nologo.
+CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+
+// Default value for MYSQL_OPT_SSL_VERIFY_SERVER_CERT
+CONC_DEFAULT_SSL_VERIFY_SERVER_CERT:BOOL=ON
+
+// Use Boost::Context for the non-blocking API on platforms without native implementation
+CONC_WITH_BOOST_CONTEXT:BOOL=OFF
+
+// creates manpages
+CONC_WITH_DOCS:BOOL=OFF
+
+// Enables support of dynamic columns
+CONC_WITH_DYNCOL:BOOL=ON
+
+// Build tools
+CONC_WITH_TOOLS:BOOL=OFF
+
+// build test suite
+CONC_WITH_UNIT_TESTS:BOOL=ON
+
+// Compile CONNECT storage engine with BSON support
+CONNECT_WITH_BSON:BOOL=ON
+
+// Compile CONNECT storage engine with JDBC support
+CONNECT_WITH_JDBC:BOOL=ON
+
+// Compile CONNECT storage engine with LIBXML2 support
+CONNECT_WITH_LIBXML2:BOOL=ON
+
+// Compile CONNECT storage engine with MONGO support
+CONNECT_WITH_MONGO:BOOL=ON
+
+// Compile CONNECT storage engine with ODBC support
+CONNECT_WITH_ODBC:BOOL=ON
+
+// Compile CONNECT storage engine with REST support
+CONNECT_WITH_REST:BOOL=ON
+
+// Compile CONNECT storage engine with VCT support
+CONNECT_WITH_VCT:BOOL=ON
+
+// Compile CONNECT storage engine with index file mapping support
+CONNECT_WITH_XMAP:BOOL=ON
+
+// Compile CONNECT storage engine with ZIP support
+CONNECT_WITH_ZIP:BOOL=ON
+
+// The directory containing a CMake configuration file for CURL.
+CURL_DIR:PATH=CURL_DIR-NOTFOUND
+
+// Path to a file.
+CURL_INCLUDE_DIR:PATH=/usr/include/x86_64-linux-gnu
+
+// Path to a library.
+CURL_LIBRARY_DEBUG:FILEPATH=CURL_LIBRARY_DEBUG-NOTFOUND
+
+// Path to a library.
+CURL_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libcurl.so
+
+// Path to a library.
+CURSES_CURSES_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcurses.so
+
+// Path to a library.
+CURSES_FORM_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libform.so
+
+// Path to a file.
+CURSES_INCLUDE_PATH:PATH=/usr/include
+
+// Path to a library.
+CURSES_NCURSES_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libncurses.so
+
+// Exclude the performance schema condition instrumentation
+DISABLE_PSI_COND:BOOL=OFF
+
+// Exclude the performance schema file instrumentation
+DISABLE_PSI_FILE:BOOL=OFF
+
+// Exclude the performance schema idle instrumentation
+DISABLE_PSI_IDLE:BOOL=OFF
+
+// Exclude the performance schema memory instrumentation
+DISABLE_PSI_MEMORY:BOOL=OFF
+
+// Exclude the performance schema metadata instrumentation
+DISABLE_PSI_METADATA:BOOL=OFF
+
+// Exclude the performance schema mutex instrumentation
+DISABLE_PSI_MUTEX:BOOL=OFF
+
+// Exclude the performance schema prepared statements instances instrumentation
+DISABLE_PSI_PS:BOOL=OFF
+
+// Exclude the performance schema rwlock instrumentation
+DISABLE_PSI_RWLOCK:BOOL=OFF
+
+// Exclude the performance schema socket instrumentation
+DISABLE_PSI_SOCKET:BOOL=OFF
+
+// Exclude the performance schema stored procedure instrumentation
+DISABLE_PSI_SP:BOOL=OFF
+
+// Exclude the performance schema stage instrumentation
+DISABLE_PSI_STAGE:BOOL=OFF
+
+// Exclude the performance schema statement instrumentation
+DISABLE_PSI_STATEMENT:BOOL=OFF
+
+// Exclude the performance schema statement digest instrumentation
+DISABLE_PSI_STATEMENT_DIGEST:BOOL=OFF
+
+// Exclude the performance schema table instrumentation
+DISABLE_PSI_TABLE:BOOL=OFF
+
+// Exclude the performance schema thread instrumentation
+DISABLE_PSI_THREAD:BOOL=OFF
+
+// Exclude the performance schema transaction instrumentation
+DISABLE_PSI_TRANSACTION:BOOL=OFF
+
+// Don't build shared libraries, compile code as position-dependent
+DISABLE_SHARED:BOOL=OFF
+
+// Path to a program.
+DTRACE:FILEPATH=DTRACE-NOTFOUND
+
+// Enable Json_writer_object / Json_writer_array checking to produce consistent JSON output
+ENABLED_JSON_WRITER_CONSISTENCY_CHECKS:BOOL=OFF
+
+// If we should should enable LOAD DATA LOCAL by default (OFF/ON/AUTO)
+ENABLED_LOCAL_INFILE:STRING=AUTO
+
+// Enable profiling
+ENABLED_PROFILING:BOOL=ON
+
+// Enable gcov (debug, macOS and Linux builds only)
+ENABLE_GCOV:BOOL=OFF
+
+// Path to a library.
+EVENT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libevent.so
+
+//
+FEATURE_SUMMARY:BOOL=OFF
+
+// Path to a program.
+GETCONF:FILEPATH=/usr/bin/getconf
+
+// Git command line client
+GIT_EXECUTABLE:FILEPATH=GIT_EXECUTABLE-NOTFOUND
+
+// Groonga's default DB key management algorithm
+GRN_DEFAULT_DB_KEY:STRING=auto
+
+// Groonga's default document root
+GRN_DEFAULT_DOCUMENT_ROOT:PATH=/usr/local/mysql/share/groonga/html/admin
+
+// Groonga's default document root base path
+GRN_DEFAULT_DOCUMENT_ROOT_BASE:PATH=html/admin
+
+// Groonga's default encoding
+GRN_DEFAULT_ENCODING:STRING=utf8
+
+// Groonga's default match escalation threshold
+GRN_DEFAULT_MATCH_ESCALATION_THRESHOLD:STRING=0
+
+// Groonga's default relative document root
+GRN_DEFAULT_RELATIVE_DOCUMENT_ROOT:PATH=share/groonga/html/admin
+
+// Build as a static library to embed into an application
+GRN_EMBED:BOOL=ON
+
+// timeout to acquire a lock.
+GRN_LOCK_TIMEOUT:STRING=900000
+
+// wait time in nanosecond to acquire a lock.
+GRN_LOCK_WAIT_TIME_NANOSECOND:STRING=1000000
+
+// log file path
+GRN_LOG_PATH:FILEPATH=/usr/local/mysql/var/log/groonga/groonga.log
+
+// mecab-config path
+GRN_MECAB_CONFIG:FILEPATH=mecab-config
+
+// Path to a program.
+GRN_MECAB_CONFIG_ABSOLUTE_PATH:FILEPATH=GRN_MECAB_CONFIG_ABSOLUTE_PATH-NOTFOUND
+
+// DANGER!!! Groonga's stack size. Normarlly, you should not change this variable.
+GRN_STACK_SIZE:STRING=1024
+
+// use bundled LZ4
+GRN_WITH_BUNDLED_LZ4:BOOL=OFF
+
+// use bundled MeCab
+GRN_WITH_BUNDLED_MECAB:BOOL=OFF
+
+// use bundled MessagePack
+GRN_WITH_BUNDLED_MESSAGE_PACK:BOOL=OFF
+
+// enable debug build.
+GRN_WITH_DEBUG:BOOL=OFF
+
+// use KyTea for morphological analysis
+GRN_WITH_KYTEA:STRING=auto
+
+// use libevent for suggestion
+GRN_WITH_LIBEVENT:STRING=auto
+
+// use libstemmer for stemming token filter
+GRN_WITH_LIBSTEMMER:STRING=auto
+
+// Support data compression by LZ4.
+GRN_WITH_LZ4:STRING=auto
+
+// use MeCab for morphological analysis
+GRN_WITH_MECAB:STRING=auto
+
+// use MessagePack for suggestion
+GRN_WITH_MESSAGE_PACK:STRING=auto
+
+// use mruby
+GRN_WITH_MRUBY:BOOL=OFF
+
+// use NFKC based UTF8 normalization.
+GRN_WITH_NFKC:BOOL=ON
+
+// use ZeroMQ for suggestion
+GRN_WITH_ZEROMQ:STRING=auto
+
+// Support data compression by zlib.
+GRN_WITH_ZLIB:STRING=auto
+
+// Path to a program.
+GROFF:FILEPATH=GROFF-NOTFOUND
+
+// Build as a static library to embed into an application
+GROONGA_NORMALIZER_MYSQL_EMBED:BOOL=ON
+
+//
+GSSAPI_FLAVOR:STRING=MIT
+
+//
+GSSAPI_FOUND:STRING=TRUE
+
+//
+GSSAPI_INCS:STRING=-isystem /usr/include/mit-krb5
+
+//
+GSSAPI_LIBS:STRING=-L/usr/lib/x86_64-linux-gnu/mit-krb5 -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl,-z,relro -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err
+
+// path to the executable
+GTAR_EXECUTABLE:FILEPATH=GTAR_EXECUTABLE-NOTFOUND
+
+// Command for determining hostname
+HOSTNAME:STRING=uname -n
+
+// Enable innodb_enable_xap_unlock_unmodified_for_primary_debug system variable even for release build
+INNODB_ENABLE_XAP_UNLOCK_UNMODIFIED_FOR_PRIMARY:BOOL=OFF
+
+// BIN installation directory
+INSTALL_BINDIR:STRING=bin
+
+// DOC installation directory
+INSTALL_DOCDIR:STRING=docs
+
+// DOCREADME installation directory
+INSTALL_DOCREADMEDIR:STRING=.
+
+// INCLUDE installation directory
+INSTALL_INCLUDEDIR:STRING=include/mysql
+
+// INFO installation directory
+INSTALL_INFODIR:STRING=docs
+
+// Installation directory layout. Options are: STANDALONE (as in zip or tar.gz installer) RPM DEB SVR4
+INSTALL_LAYOUT:STRING=STANDALONE
+
+// LIB installation directory
+INSTALL_LIBDIR:STRING=lib
+
+// MAN installation directory
+INSTALL_MANDIR:STRING=man
+
+// MYSQLDATA installation directory
+INSTALL_MYSQLDATADIR:STRING=data
+
+// MYSQLSHARE installation directory
+INSTALL_MYSQLSHAREDIR:STRING=share
+
+// MYSQLTEST installation directory
+INSTALL_MYSQLTESTDIR:STRING=mariadb-test
+
+// PAMDATA installation directory
+INSTALL_PAMDATADIR:STRING=share
+
+// PAM installation directory
+INSTALL_PAMDIR:STRING=share
+
+// PLUGIN installation directory
+INSTALL_PLUGINDIR:STRING=lib/plugin
+
+// Runtime state directory
+INSTALL_RUNDIR:FILEPATH=/tmp
+
+// SBIN installation directory
+INSTALL_SBINDIR:STRING=bin
+
+// SCRIPT installation directory
+INSTALL_SCRIPTDIR:STRING=scripts
+
+// SHARE installation directory
+INSTALL_SHAREDIR:STRING=share
+
+// SQLBENCH installation directory
+INSTALL_SQLBENCHDIR:STRING=.
+
+// SUPPORTFILES installation directory
+INSTALL_SUPPORTFILESDIR:STRING=support-files
+
+// UNIX_ADDR installation directory
+INSTALL_UNIX_ADDRDIR:STRING=/tmp/mysql.sock
+
+// Specify the I/O buffer size
+IO_SIZE:STRING=4096
+
+// Java AWT Native Interface include directory
+JAVA_AWT_INCLUDE_PATH:PATH=JAVA_AWT_INCLUDE_PATH-NOTFOUND
+
+// Java AWT Native Interface library
+JAVA_AWT_LIBRARY:FILEPATH=JAVA_AWT_LIBRARY-NOTFOUND
+
+// JNI include directory
+JAVA_INCLUDE_PATH:PATH=JAVA_INCLUDE_PATH-NOTFOUND
+
+// jni_md.h jniport.h include directory
+JAVA_INCLUDE_PATH2:PATH=JAVA_INCLUDE_PATH2-NOTFOUND
+
+// Java Virtual Machine library
+JAVA_JVM_LIBRARY:FILEPATH=JAVA_JVM_LIBRARY-NOTFOUND
+
+// Path to a program.
+Java_IDLJ_EXECUTABLE:FILEPATH=Java_IDLJ_EXECUTABLE-NOTFOUND
+
+// Path to a program.
+Java_JARSIGNER_EXECUTABLE:FILEPATH=Java_JARSIGNER_EXECUTABLE-NOTFOUND
+
+// Path to a program.
+Java_JAR_EXECUTABLE:FILEPATH=Java_JAR_EXECUTABLE-NOTFOUND
+
+// Path to a program.
+Java_JAVAC_EXECUTABLE:FILEPATH=Java_JAVAC_EXECUTABLE-NOTFOUND
+
+// Path to a program.
+Java_JAVADOC_EXECUTABLE:FILEPATH=Java_JAVADOC_EXECUTABLE-NOTFOUND
+
+// Path to a program.
+Java_JAVAH_EXECUTABLE:FILEPATH=Java_JAVAH_EXECUTABLE-NOTFOUND
+
+// Path to a program.
+Java_JAVA_EXECUTABLE:FILEPATH=Java_JAVA_EXECUTABLE-NOTFOUND
+
+// Path to a file.
+Judy_INCLUDE_DIRS:PATH=/usr/include
+
+// Path to a library.
+Judy_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libJudy.so
+
+// Path to a program.
+KRB5_CONFIG:FILEPATH=/usr/bin/krb5-config
+
+// path to the flex executable
+LEX_EXECUTABLE:FILEPATH=/usr/bin/flex
+
+// Path to a file.
+LIBAIO_INCLUDE_DIRS:PATH=/usr/include
+
+// Path to a library.
+LIBAIO_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libaio.so
+
+// Path to a file.
+LIBEDIT_INCLUDE_DIR:PATH=LIBEDIT_INCLUDE_DIR-NOTFOUND
+
+// Path to a library.
+LIBEDIT_LIBRARY:FILEPATH=LIBEDIT_LIBRARY-NOTFOUND
+
+// Path to a file.
+LIBLZMA_INCLUDE_DIR:PATH=/usr/include
+
+// Path to a library.
+LIBLZMA_LIBRARY_DEBUG:FILEPATH=LIBLZMA_LIBRARY_DEBUG-NOTFOUND
+
+// Path to a library.
+LIBLZMA_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/liblzma.so
+
+// Path to a file.
+LIBXML2_INCLUDE_DIR:PATH=/usr/include/libxml2
+
+// Path to a library.
+LIBXML2_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libxml2.so
+
+// Path to a program.
+LIBXML2_XMLLINT_EXECUTABLE:FILEPATH=LIBXML2_XMLLINT_EXECUTABLE-NOTFOUND
+
+// Path to a file.
+LZ4_INCLUDE_DIRS:PATH=/usr/include
+
+// Path to a library.
+LZ4_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/liblz4.so
+
+//
+LZ4_LIBS:STRING=
+
+// Path to a file.
+LZO_INCLUDE_DIRS:PATH=/usr/include
+
+// Path to a library.
+LZO_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/liblzo2.so
+
+// Path to a file.
+Libfmt_core_h:FILEPATH=/usr/include/fmt/core.h
+
+// Set the entity that appears as the manufacturer of packages that support a manufacturer field.
+MANUFACTURER:STRING=Built from Source
+
+// Max number of indexes
+MAX_INDEXES:STRING=64
+
+// Whether to build Mroonga for embedded server or not. You can't use Mroonga built for embedded server with non embedded server.
+MRN_BUILD_FOR_EMBEDDED_SERVER:BOOL=OFF
+
+// The default fulltext parser (Deprecated. Use MRN_DEFAULT_TOKENIZER instead.)
+MRN_DEFAULT_PARSER:STRING=
+
+// The default tokenizer for fulltext index
+MRN_DEFAULT_TOKENIZER:STRING=
+
+// Embed libgroonga
+MRN_GROONGA_EMBED:BOOL=ON
+
+// Embed groonga-normalizer-mysql Groonga plugin
+MRN_GROONGA_NORMALIZER_MYSQL_EMBED:BOOL=ON
+
+// default MySQL data directory
+MYSQL_DATADIR:PATH=/usr/local/mysql/data
+
+// Enable MariaDB maintainer-specific warnings. One of: NO (warnings are disabled) WARN (warnings are enabled) ERR (warnings are errors) AUTO (warnings are errors in Debug only)
+MYSQL_MAINTAINER_MODE:STRING=AUTO
+
+// Path to a program.
+NROFF:FILEPATH=NROFF-NOTFOUND
+
+// Specify the path to sql.h.
+ODBC_INCLUDES:FILEPATH=ODBC_INCLUDES-NOTFOUND
+
+// Specify the ODBC driver manager library here.
+ODBC_LIBRARY:FILEPATH=ODBC_LIBRARY-NOTFOUND
+
+// Path to a library.
+OPENSSL_CRYPTO_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
+
+// Path to a file.
+OPENSSL_INCLUDE_DIR:PATH=/usr/include
+
+// Path to a library.
+OPENSSL_SSL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libssl.so
+
+// Path to a library.
+PAM_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpam.so
+
+// Path to a file.
+PCRE2_INCLUDE_DIR:PATH=/usr/include
+
+// Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+// pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
+// How to build plugin ARCHIVE. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_ARCHIVE:STRING=DYNAMIC
+
+// How to build plugin AUDIT_NULL. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_AUDIT_NULL:STRING=DYNAMIC
+
+// How to build plugin AUTH_0X0100. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_AUTH_0X0100:STRING=DYNAMIC
+
+// How to build plugin AUTH_ED25519. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_AUTH_ED25519:STRING=DYNAMIC
+
+// How to build plugin AUTH_GSSAPI. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_AUTH_GSSAPI:STRING=DYNAMIC
+
+// How to build plugin AUTH_MYSQL_SHA2. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_AUTH_MYSQL_SHA2:STRING=DYNAMIC
+
+// How to build plugin AUTH_PAM. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_AUTH_PAM:STRING=DYNAMIC
+
+// How to build plugin AUTH_PAM_V1. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_AUTH_PAM_V1:STRING=DYNAMIC
+
+// How to build plugin AUTH_PARSEC. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_AUTH_PARSEC:STRING=DYNAMIC
+
+// How to build plugin AUTH_SOCKET. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_AUTH_SOCKET:STRING=STATIC
+
+// How to build plugin AUTH_TEST_PLUGIN. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_AUTH_TEST_PLUGIN:STRING=DYNAMIC
+
+// How to build plugin BLACKHOLE. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_BLACKHOLE:STRING=DYNAMIC
+
+// How to build plugin COLUMNSTORE. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_COLUMNSTORE:STRING=NO
+
+// How to build plugin CONNECT. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_CONNECT:STRING=DYNAMIC
+
+// How to build plugin DAEMON_EXAMPLE. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_DAEMON_EXAMPLE:STRING=DYNAMIC
+
+// How to build plugin DEBUG_KEY_MANAGEMENT. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_DEBUG_KEY_MANAGEMENT:STRING=DYNAMIC
+
+// How to build plugin DIALOG_EXAMPLES. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_DIALOG_EXAMPLES:STRING=DYNAMIC
+
+// How to build plugin DISKS. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_DISKS:STRING=DYNAMIC
+
+// How to build plugin DUCKDB. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_DUCKDB:STRING=DYNAMIC
+
+// How to build plugin EXAMPLE. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_EXAMPLE:STRING=DYNAMIC
+
+// How to build plugin EXAMPLE_KEY_MANAGEMENT. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_EXAMPLE_KEY_MANAGEMENT:STRING=DYNAMIC
+
+// How to build plugin FEDERATED. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_FEDERATED:STRING=DYNAMIC
+
+// How to build plugin FEDERATEDX. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_FEDERATEDX:STRING=DYNAMIC
+
+// How to build plugin FEEDBACK. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_FEEDBACK:STRING=STATIC
+
+// How to build plugin FILE_KEY_MANAGEMENT. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_FILE_KEY_MANAGEMENT:STRING=DYNAMIC
+
+// How to build plugin FTEXAMPLE. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_FTEXAMPLE:STRING=DYNAMIC
+
+// How to build plugin FUNC_TEST. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_FUNC_TEST:STRING=DYNAMIC
+
+// How to build plugin HANDLERSOCKET. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_HANDLERSOCKET:STRING=DYNAMIC
+
+// How to build plugin HASHICORP_KEY_MANAGEMENT. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_HASHICORP_KEY_MANAGEMENT:STRING=DYNAMIC
+
+// How to build plugin INNOBASE. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_INNOBASE:STRING=STATIC
+
+// How to build plugin LOCALES. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_LOCALES:STRING=DYNAMIC
+
+// How to build plugin METADATA_LOCK_INFO. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_METADATA_LOCK_INFO:STRING=DYNAMIC
+
+// How to build plugin MROONGA. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_MROONGA:STRING=DYNAMIC
+
+// How to build plugin OQGRAPH. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_OQGRAPH:STRING=DYNAMIC
+
+// How to build plugin PARTITION. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_PARTITION:STRING=STATIC
+
+// How to build plugin PASSWORD_REUSE_CHECK. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_PASSWORD_REUSE_CHECK:STRING=DYNAMIC
+
+// How to build plugin PERFSCHEMA. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_PERFSCHEMA:STRING=STATIC
+
+// How to build plugin PROVIDER_BZIP2. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_PROVIDER_BZIP2:STRING=DYNAMIC
+
+// How to build plugin PROVIDER_LZ4. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_PROVIDER_LZ4:STRING=DYNAMIC
+
+// How to build plugin PROVIDER_LZMA. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_PROVIDER_LZMA:STRING=DYNAMIC
+
+// How to build plugin PROVIDER_LZO. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_PROVIDER_LZO:STRING=DYNAMIC
+
+// How to build plugin PROVIDER_SNAPPY. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_PROVIDER_SNAPPY:STRING=DYNAMIC
+
+// How to build plugin QA_AUTH_CLIENT. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_QA_AUTH_CLIENT:STRING=DYNAMIC
+
+// How to build plugin QA_AUTH_INTERFACE. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_QA_AUTH_INTERFACE:STRING=DYNAMIC
+
+// How to build plugin QA_AUTH_SERVER. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_QA_AUTH_SERVER:STRING=DYNAMIC
+
+// How to build plugin QUERY_CACHE_INFO. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_QUERY_CACHE_INFO:STRING=DYNAMIC
+
+// How to build plugin QUERY_RESPONSE_TIME. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_QUERY_RESPONSE_TIME:STRING=DYNAMIC
+
+// How to build plugin ROCKSDB. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_ROCKSDB:STRING=DYNAMIC
+
+// How to build plugin S3. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_S3:STRING=DYNAMIC
+
+// How to build plugin SEQUENCE. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_SEQUENCE:STRING=STATIC
+
+// How to build plugin SERVER_AUDIT. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_SERVER_AUDIT:STRING=DYNAMIC
+
+// How to build plugin SIMPLE_PASSWORD_CHECK. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_SIMPLE_PASSWORD_CHECK:STRING=DYNAMIC
+
+// How to build plugin SPHINX. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_SPHINX:STRING=DYNAMIC
+
+// How to build plugin SPIDER. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_SPIDER:STRING=DYNAMIC
+
+// How to build plugin SQL_ERRLOG. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_SQL_ERRLOG:STRING=DYNAMIC
+
+// How to build plugin TEST_SQL_DISCOVERY. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_TEST_SQL_DISCOVERY:STRING=DYNAMIC
+
+// How to build plugin TEST_SQL_SERVICE. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_TEST_SQL_SERVICE:STRING=DYNAMIC
+
+// How to build plugin TEST_VERSIONING. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_TEST_VERSIONING:STRING=DYNAMIC
+
+// How to build plugin THREAD_POOL_INFO. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_THREAD_POOL_INFO:STRING=STATIC
+
+// How to build plugin TYPE_MYSQL_JSON. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_TYPE_MYSQL_JSON:STRING=DYNAMIC
+
+// How to build plugin TYPE_MYSQL_TIMESTAMP. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_TYPE_MYSQL_TIMESTAMP:STRING=DYNAMIC
+
+// How to build plugin TYPE_TEST. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_TYPE_TEST:STRING=DYNAMIC
+
+// How to build plugin USER_VARIABLES. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_USER_VARIABLES:STRING=STATIC
+
+// How to build plugin VIDEX. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_VIDEX:STRING=DYNAMIC
+
+// How to build plugin WSREP_INFO. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_WSREP_INFO:STRING=DYNAMIC
+
+// How to build plugin WSREP_PROVIDER. Options are: NO STATIC DYNAMIC YES AUTO.
+PLUGIN_WSREP_PROVIDER:STRING=STATIC
+
+// python shebang
+PYTHON_SHEBANG:STRING=/usr/bin/env python3
+
+// Path to a file.
+READLINE_INCLUDE_DIR:PATH=READLINE_INCLUDE_DIR-NOTFOUND
+
+// Path to a library.
+READLINE_LIBRARY:FILEPATH=READLINE_LIBRARY-NOTFOUND
+
+// Use security-enhancing compiler features (stack protector, relro, etc)
+SECURITY_HARDENED:BOOL=ON
+
+// Path to a program.
+SEMODULE_PACKAGE:FILEPATH=SEMODULE_PACKAGE-NOTFOUND
+
+// Path to a file.
+SNAPPY_INCLUDE_DIRS:PATH=/usr/include
+
+// Path to a library.
+SNAPPY_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libsnappy.so
+
+// path to the executable
+TAR_EXECUTABLE:FILEPATH=/usr/bin/tar
+
+// PATH to MySQL TMP dir. Defaults to the P_tmpdir macro in <stdio.h>
+TMPDIR:PATH=
+
+// Fill freed memory with specific byte pattern. Will result in slower execution. Options are: ON OFF AUTO.
+TRASH_FREED_MEMORY:STRING=AUTO
+
+// Update submodules automatically
+UPDATE_SUBMODULES:BOOL=ON
+
+// Path to a file.
+URING_INCLUDE_DIRS:PATH=/usr/include
+
+// Path to a library.
+URING_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/liburing.so
+
+// Use Aria for temporary tables
+USE_ARIA_FOR_TMP_TABLES:BOOL=ON
+
+// disable packed sort keys
+WITHOUT_PACKED_SORT_KEYS:BOOL=OFF
+
+// Build only the client library and clients
+WITHOUT_SERVER:BOOL=OFF
+
+// Enable address sanitizer
+WITH_ASAN:BOOL=OFF
+
+// Build with lz4. Possible values are 'ON', 'OFF', 'AUTO' and default is 'AUTO'
+WITH_COLUMNSTORE_LZ4:STRING=AUTO
+
+// Enable DBUG_ENTER()/DBUG_RETURN()/DBUG_PRINT()
+WITH_DBUG_TRACE:BOOL=ON
+
+// Compile MariaDB with embedded server
+WITH_EMBEDDED_SERVER:BOOL=OFF
+
+// Options are: none complex all
+WITH_EXTRA_CHARSETS:STRING=all
+
+// build with fallocate
+WITH_FALLOCATE:BOOL=ON
+
+// Enable profiling with gprof
+WITH_GPROF:BOOL=OFF
+
+// Include innodb_adaptive_hash_index
+WITH_INNODB_AHI:BOOL=ON
+
+// Enable extra InnoDB debug checks
+WITH_INNODB_EXTRA_DEBUG:BOOL=OFF
+
+// Support memory-mapped InnoDB redo log
+WITH_INNODB_PMEM:BOOL=ON
+
+// Cache index root block descriptors
+WITH_INNODB_ROOT_GUESS:BOOL=ON
+
+// Require that libaio is used
+WITH_LIBAIO:BOOL=OFF
+
+// Which libfmt to use (possible values are 'bundled', 'system', or 'auto')
+WITH_LIBFMT:STRING=auto
+
+// Compile with tcp wrappers support
+WITH_LIBWRAP:BOOL=OFF
+
+// Include mariabackup
+WITH_MARIABACKUP:BOOL=ON
+
+// Enable memory sanitizer
+WITH_MSAN:BOOL=OFF
+
+// Additional linker flags for mysqld
+WITH_MYSQLD_LDFLAGS:STRING=
+
+// Build with non-uniform memory access, allowing --innodb-numa-interleave. Options are ON|OFF|AUTO. ON = enabled (requires NUMA library), OFF = disabled, AUTO = enabled if NUMA library found.
+WITH_NUMA:STRING=AUTO
+
+// Which pcre to use (possible values are 'bundled', 'system', or 'auto')
+WITH_PCRE:STRING=auto
+
+// Generate PIC objects
+WITH_PIC:BOOL=OFF
+
+// Enable protection of statement's memory root after first SP/PS execution. Turned into account only for debug build
+WITH_PROTECT_STATEMENT_MEMROOT:BOOL=ON
+
+// Use bundled readline
+WITH_READLINE:BOOL=OFF
+
+// Build RocksDB  with BZip2 compression. Possible values are 'ON', 'OFF', 'AUTO' and default is 'AUTO'
+WITH_ROCKSDB_BZip2:STRING=AUTO
+
+// build RocksDB with JeMalloc
+WITH_ROCKSDB_JEMALLOC:BOOL=OFF
+
+// Build RocksDB  with LZ4 compression. Possible values are 'ON', 'OFF', 'AUTO' and default is 'AUTO'
+WITH_ROCKSDB_LZ4:STRING=AUTO
+
+// Build RocksDB  with Snappy compression. Possible values are 'ON', 'OFF', 'AUTO' and default is 'AUTO'
+WITH_ROCKSDB_Snappy:STRING=AUTO
+
+// Build RocksDB  with ZSTD compression. Possible values are 'ON', 'OFF', 'AUTO' and default is 'AUTO'
+WITH_ROCKSDB_ZSTD:STRING=AUTO
+
+// Use safemalloc memory debugger. Will result in slower execution. Options are: ON OFF AUTO.
+WITH_SAFEMALLOC:STRING=AUTO
+
+// Generate Software Bill of Materials (SBOM)
+WITH_SBOM:BOOL=OFF
+
+// bundled (use wolfssl), yes (prefer os library if present, otherwise use bundled), system (use os library)
+WITH_SSL:STRING=yes
+
+// Enable systemd scripts and notification support. Allowed values yes/no/auto.
+WITH_SYSTEMD:STRING=auto
+
+// Which Thrift to use (possible values are 'bundled', 'system', or 'auto')
+WITH_THRIFT:STRING=bundled
+
+// Enable thread sanitizer
+WITH_TSAN:BOOL=OFF
+
+// Enable undefined behavior sanitizer
+WITH_UBSAN:BOOL=OFF
+
+// Compile MySQL with unit tests
+WITH_UNIT_TESTS:BOOL=ON
+
+// Require that io_uring be used
+WITH_URING:BOOL=OFF
+
+// Valgrind instrumentation
+WITH_VALGRIND:BOOL=OFF
+
+// Build all components of WSREP (unit tests, sample programs)
+WITH_WSREP_ALL:BOOL=OFF
+
+// Which zlib to use (possible values are 'bundled' or 'system')
+WITH_ZLIB:STRING=system
+
+// Fail compilation on any warnings
+WSREP_LIB_MAINTAINER_MODE:BOOL=OFF
+
+// Compile with strict build flags
+WSREP_LIB_STRICT_BUILD_FLAGS:BOOL=OFF
+
+// Enable address sanitizer
+WSREP_LIB_WITH_ASAN:BOOL=OFF
+
+// Compile with coverage instrumentation
+WSREP_LIB_WITH_COVERAGE:BOOL=OFF
+
+// Compile sample dbsim program
+WSREP_LIB_WITH_DBSIM:BOOL=OFF
+
+// Generate documentation
+WSREP_LIB_WITH_DOCUMENTATION:BOOL=OFF
+
+// Enable thread sanitizer
+WSREP_LIB_WITH_TSAN:BOOL=OFF
+
+// Compile unit tests
+WSREP_LIB_WITH_UNIT_TESTS:BOOL=OFF
+
+// Path to a file.
+ZLIB_INCLUDE_DIR:PATH=/usr/include
+
+// Path to a library.
+ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
+
+// Path to a library.
+ZLIB_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libz.so
+
+// Path to a file.
+ZSTD_INCLUDE_DIRS:PATH=/usr/include
+
+// Path to a library.
+ZSTD_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libzstd.so
+
+// The directory containing a CMake configuration file for aws-cpp-sdk-kms.
+aws-cpp-sdk-kms_DIR:PATH=aws-cpp-sdk-kms_DIR-NOTFOUND
+
+// The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.83.0
+
+// The directory containing a CMake configuration file for libmongoc-1.0.
+libmongoc-1.0_DIR:PATH=libmongoc-1.0_DIR-NOTFOUND
+
+// Path to a library.
+pkgcfg_lib_NCURSES_ncurses:FILEPATH=/usr/lib/x86_64-linux-gnu/libncurses.so
+
+// Path to a library.
+pkgcfg_lib_NCURSES_tinfo:FILEPATH=/usr/lib/x86_64-linux-gnu/libtinfo.so
+
+// Path to a library.
+pkgcfg_lib_PCRE_pcre2-8:FILEPATH=/usr/lib/x86_64-linux-gnu/libpcre2-8.so
+
+// Path to a library.
+pkgcfg_lib_PC_CURL_curl:FILEPATH=/usr/lib/x86_64-linux-gnu/libcurl.so
+
+// Path to a library.
+pkgcfg_lib_PC_LIBXML_xml2:FILEPATH=/usr/lib/x86_64-linux-gnu/libxml2.so
+
+// Path to a library.
+pkgcfg_lib__OPENSSL_crypto:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
+
+// Path to a library.
+pkgcfg_lib__OPENSSL_ssl:FILEPATH=/usr/lib/x86_64-linux-gnu/libssl.so
+

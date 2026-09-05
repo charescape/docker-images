@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# nginx master must run as root so it can bind 80/443 then drop workers to www-data.
+# exec so SIGTERM from /sbin/my_init reaches nginx (not this shell).
+# runit requires a foreground process: daemon off.
+
+exec /usr/local/openresty/nginx/sbin/nginx -g 'daemon off;'

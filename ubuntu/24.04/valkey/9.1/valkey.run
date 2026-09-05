@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# `/sbin/setuser www-data` runs valkey-server as www-data.
+# exec so SIGTERM from /sbin/my_init reaches valkey-server (not this shell).
+# runit requires a foreground process: daemonize no in valkey.conf.
+
+exec /sbin/setuser www-data /usr/local/valkey/bin/valkey-server /wwwdata/valkey/run/valkey.conf
