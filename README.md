@@ -1,3 +1,5 @@
+镜像使用文档在 `docker-images-docs` 仓库，路径与本仓镜像目录一一对应，例如 `ubuntu/24.04/mariadb/12.3/README.md`。
+
 目录结构：
 
 ```
