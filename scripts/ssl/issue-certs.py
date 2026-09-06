@@ -29,10 +29,10 @@ CONFIG_PATH = SCRIPT_DIR / "domains.toml"
 LOG_PATH = SCRIPT_DIR / "issue-certs.log"
 LOCK_PATH = SCRIPT_DIR / "issue-certs.lock"
 CERT_ROOT = Path("/dockerdata/my_shared_dir/letsencrypt")
-ACME_IMAGE = "ghcr.io/acmesh-official/acme.sh:latest"
 RENEW_AFTER_SECONDS = 75 * 86400
 DNS_SLEEP_SECONDS = 30
 ACME_WEBROOT_IN_CONTAINER = "/acme-webroot"
+GLOBAL_KEYS = frozenset({"acmesh_image"})
 
 DNS_PROVIDERS = {
     "aliyun": ("dns_ali", "Ali_Key", "Ali_Secret"),
@@ -45,6 +45,11 @@ KEY_LENGTHS = {
 }
 
 log = logging.getLogger("issue-certs")
+
+
+@dataclass(frozen=True)
+class GlobalConfig:
+    acmesh_image: str
 
 
 @dataclass(frozen=True)
@@ -116,6 +121,15 @@ def load_raw_config(path: Path) -> dict[str, Any]:
     if not isinstance(data, dict):
         raise ValueError("domains.toml root must be a table")
     return data
+
+
+def parse_global_config(raw: dict[str, Any]) -> GlobalConfig:
+    if "acmesh_image" not in raw:
+        raise ValueError("domains.toml: missing top-level acmesh_image")
+    image = raw["acmesh_image"]
+    if not isinstance(image, str) or not image.strip():
+        raise ValueError("domains.toml: acmesh_image must be a non-empty string")
+    return GlobalConfig(acmesh_image=image.strip())
 
 
 def parse_domain_config(domain: str, raw: Any) -> DomainConfig:
@@ -224,7 +238,7 @@ def dns_env(cfg: DomainConfig) -> dict[str, str]:
     return env
 
 
-def build_docker_cmd(cfg: DomainConfig, tmpdir: Path) -> list[str]:
+def build_docker_cmd(cfg: DomainConfig, tmpdir: Path, acmesh_image: str) -> list[str]:
     cmd = ["docker", "run", "--rm", "-i", "-v", f"{tmpdir}:/acme.sh"]
     if cfg.challenge == "HTTP-01":
         assert cfg.acme_webroot is not None
@@ -232,7 +246,7 @@ def build_docker_cmd(cfg: DomainConfig, tmpdir: Path) -> list[str]:
     else:
         for key, value in dns_env(cfg).items():
             cmd.extend(["-e", f"{key}={value}"])
-    cmd.append(ACME_IMAGE)
+    cmd.append(acmesh_image)
     cmd.extend(["--issue", "--server", "letsencrypt"])
     cmd.extend(["--accountemail", cfg.email])
     cmd.extend(["--keylength", KEY_LENGTHS[cfg.key_algorithm]])
@@ -306,7 +320,7 @@ def reload_nginx(container: str) -> None:
         raise RuntimeError(f"nginx reload failed in container {container} (exit {rc})")
 
 
-def issue_one(cfg: DomainConfig) -> None:
+def issue_one(cfg: DomainConfig, acmesh_image: str) -> None:
     if cfg.challenge == "HTTP-01":
         assert cfg.acme_webroot is not None
         if not cfg.acme_webroot.is_dir():
@@ -314,7 +328,7 @@ def issue_one(cfg: DomainConfig) -> None:
 
     tmpdir = Path(tempfile.mkdtemp(prefix=f"issue-certs-{cfg.domain}-"))
     try:
-        rc = run_logged(build_docker_cmd(cfg, tmpdir))
+        rc = run_logged(build_docker_cmd(cfg, tmpdir, acmesh_image))
         if rc != 0:
             raise RuntimeError(f"{cfg.domain}: acme.sh exited {rc}")
         copy_certs(tmpdir, cfg)
@@ -353,17 +367,18 @@ def main(argv: list[str]) -> int:
 
         try:
             raw = load_raw_config(CONFIG_PATH)
+            global_cfg = parse_global_config(raw)
         except (OSError, tomllib.TOMLDecodeError, ValueError) as exc:
             log.error("failed to read %s: %s", CONFIG_PATH, exc)
             return 1
 
         selected = list(args.domains)
         if selected:
-            unknown = [name for name in selected if name not in raw]
-            names = [name for name in selected if name in raw]
+            unknown = [name for name in selected if name not in raw or name in GLOBAL_KEYS]
+            names = [name for name in selected if name in raw and name not in GLOBAL_KEYS]
         else:
             unknown = []
-            names = list(raw.keys())
+            names = [name for name in raw if name not in GLOBAL_KEYS]
 
         failed = 0
         for name in unknown:
@@ -384,7 +399,7 @@ def main(argv: list[str]) -> int:
 
             log.info("issue %s (%s)", cfg.domain, ",".join(cfg.names))
             try:
-                issue_one(cfg)
+                issue_one(cfg, global_cfg.acmesh_image)
                 log.info("done %s", cfg.domain)
             except Exception as exc:
                 log.error("failed %s: %s", cfg.domain, exc)

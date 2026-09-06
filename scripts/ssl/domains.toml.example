@@ -1,3 +1,5 @@
+acmesh_image = "ghcr.io/acmesh-official/acme.sh:latest"
+
 ["example1.com"]
 with_www = true
 type = "DNS-01"
