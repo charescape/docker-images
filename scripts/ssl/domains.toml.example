@@ -1,0 +1,42 @@
+["example1.com"]
+with_www = true
+type = "DNS-01"
+dns_provider = "aliyun"
+dns_credentials = { id = "", secret = "" }
+email = "admin@example1.com"
+key_algorithm = "ec-256"
+reload_container_name = "openrestyphp8v4"
+
+["test.example2.com"]
+with_www = false
+type = "DNS-01"
+dns_provider = "tencent"
+dns_credentials = { id = "", secret = "" }
+email = "admin@example2.com"
+key_algorithm = "ec-256"
+reload_container_name = "openrestyphp8v4"
+
+["example3.com"]
+with_www = true
+type = "HTTP-01"
+acme_webroot = "/dockerdata/my_shared_dir/example3.com/public"
+email = "admin@example3.com"
+key_algorithm = "ec-256"
+reload_container_name = "openrestyphp8v4"
+
+["test.example4.com"]
+with_www = false
+type = "HTTP-01"
+acme_webroot = "/dockerdata/my_shared_dir/test.example4.com/public"
+email = "admin@example4.com"
+key_algorithm = "ec-256"
+reload_container_name = "openrestyphp8v4"
+
+["cf.example5.com"]
+with_www = false
+type = "DNS-01"
+dns_provider = "cloudflare"
+dns_credentials = { id = "", secret = "" }
+email = "admin@example5.com"
+key_algorithm = "rsa-2048"
+reload_container_name = "openrestyphp8v4"
