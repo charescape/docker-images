@@ -16,6 +16,7 @@ jobs:
           python-version: "3.14"
       - name: Install Ruff and mypy
         run: pip install ruff mypy
+      - run: chmod +x scripts/ssl/issue-certs.py
       - name: Run Ruff
         run: |
           set -eu
