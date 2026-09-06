@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Issue or skip-renew Let's Encrypt certs via acme.sh docker, one domain per run."""
+"""Issue or skip-renew Let's Encrypt certs via acme.sh docker, one domain per run.
+
+Host runtime this script is written for:
+  OS:      Ubuntu 24.04
+  Python:  3.14 (checked with python3 3.14.4; stdlib only, including tomllib)
+  Docker:  Engine + CLI on the host (`docker run`, `docker exec`); no daemon in this script
+"""
 
 from __future__ import annotations
 
@@ -269,8 +275,15 @@ def find_acme_cert_dir(tmpdir: Path, cfg: DomainConfig) -> Path:
     )
 
 
+def ensure_dest_dir(cfg: DomainConfig) -> None:
+    dest = cfg.dest_dir
+    if dest.is_dir():
+        return
+    dest.mkdir(parents=True, exist_ok=True)
+    log.info("created %s", dest)
+
+
 def atomic_copy(src: Path, dest: Path, mode: int) -> None:
-    dest.parent.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_name(dest.name + ".tmp")
     shutil.copyfile(src, tmp)
     os.chmod(tmp, mode)
@@ -279,6 +292,7 @@ def atomic_copy(src: Path, dest: Path, mode: int) -> None:
 
 def copy_certs(tmpdir: Path, cfg: DomainConfig) -> None:
     src_dir = find_acme_cert_dir(tmpdir, cfg)
+    ensure_dest_dir(cfg)
     atomic_copy(src_dir / "fullchain.cer", cfg.fullchain_path, 0o644)
     atomic_copy(src_dir / f"{cfg.domain}.key", cfg.privkey_path, 0o600)
     log.info("copied certs to %s", cfg.dest_dir)
