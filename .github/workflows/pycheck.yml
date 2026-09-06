@@ -20,7 +20,7 @@ jobs:
         run: |
           set -eu
           git ls-files -z '*.py' \
-            | xargs -0 -r ruff check
+            | xargs -0 -r ruff check --target-version py314
       - name: Run mypy
         run: |
           set -eu
