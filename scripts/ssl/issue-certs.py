@@ -391,7 +391,7 @@ def main(argv: list[str]) -> int:
             try:
                 issue_one(cfg)
                 log.info("done %s", cfg.domain)
-            except (OSError, RuntimeError) as exc:
+            except Exception as exc:
                 log.error("failed %s: %s", cfg.domain, exc)
                 failed += 1
 
