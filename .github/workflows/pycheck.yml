@@ -1,0 +1,28 @@
+name: pycheck
+
+on:
+  push:
+
+jobs:
+  pycheck:
+    name: Ruff + mypy
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+      - name: Install Ruff and mypy
+        run: pip install ruff mypy
+      - name: Run Ruff
+        run: |
+          set -eu
+          git ls-files -z '*.py' \
+            | xargs -0 -r ruff check
+      - name: Run mypy
+        run: |
+          set -eu
+          git ls-files -z '*.py' \
+            | xargs -0 -r mypy --python-version 3.14
