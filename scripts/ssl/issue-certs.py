@@ -20,11 +20,9 @@ import sys
 import tempfile
 import time
 import tomllib
-from collections.abc import Iterator
-from contextlib import contextmanager
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, TextIO
+from typing import Any
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 CONFIG_PATH = SCRIPT_DIR / "domains.toml"
@@ -98,35 +96,31 @@ def setup_logging() -> None:
     log.addHandler(file_handler)
 
 
-@contextmanager
-def acquire_lock(lock_path: Path) -> Iterator[TextIO | None]:
-    with lock_path.open("a+", encoding="utf-8") as handle:
-        try:
-            fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
-        except BlockingIOError:
-            yield None
-            return
-        handle.seek(0)
-        handle.truncate()
-        handle.write(str(os.getpid()))
-        handle.flush()
-        try:
-            yield handle
-        finally:
-            fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+def acquire_lock(lock_path: Path):
+    handle = open(lock_path, "a+", encoding="utf-8")
+    try:
+        fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        handle.close()
+        return None
+    handle.seek(0)
+    handle.truncate()
+    handle.write(str(os.getpid()))
+    handle.flush()
+    return handle
 
 
 def load_raw_config(path: Path) -> dict[str, Any]:
     with path.open("rb") as fh:
         data = tomllib.load(fh)
     if not isinstance(data, dict):
-        raise TypeError("domains.toml root must be a table")
+        raise ValueError("domains.toml root must be a table")
     return data
 
 
 def parse_domain_config(domain: str, raw: Any) -> DomainConfig:
     if not isinstance(raw, dict):
-        raise TypeError(f"{domain}: section must be a table")
+        raise ValueError(f"{domain}: section must be a table")
 
     missing = [
         key
@@ -138,7 +132,7 @@ def parse_domain_config(domain: str, raw: Any) -> DomainConfig:
 
     with_www = raw["with_www"]
     if not isinstance(with_www, bool):
-        raise TypeError(f"{domain}: with_www must be a boolean")
+        raise ValueError(f"{domain}: with_www must be a boolean")
 
     challenge = str(raw["type"]).strip()
     if challenge not in {"DNS-01", "HTTP-01"}:
@@ -167,7 +161,7 @@ def parse_domain_config(domain: str, raw: Any) -> DomainConfig:
             raise ValueError(f"{domain}: dns_provider must be aliyun, tencent, or cloudflare")
         creds = raw.get("dns_credentials")
         if not isinstance(creds, dict):
-            raise TypeError(f"{domain}: dns_credentials must be a table")
+            raise ValueError(f"{domain}: dns_credentials must be a table")
         dns_id = str(creds.get("id", "")).strip()
         dns_secret = str(creds.get("secret", "")).strip()
         id_env = DNS_PROVIDERS[dns_provider][1]
@@ -348,17 +342,18 @@ def main(argv: list[str]) -> int:
     args = parse_args(argv)
     setup_logging()
 
-    with acquire_lock(LOCK_PATH) as lock:
-        if lock is None:
-            log.info("another issue-certs.py is running; skip")
-            return 0
+    lock = acquire_lock(LOCK_PATH)
+    if lock is None:
+        log.info("another issue-certs.py is running; skip")
+        return 0
+    try:
         if not CONFIG_PATH.is_file():
             log.error("missing config: %s", CONFIG_PATH)
             return 1
 
         try:
             raw = load_raw_config(CONFIG_PATH)
-        except (OSError, tomllib.TOMLDecodeError, TypeError, ValueError) as exc:
+        except (OSError, tomllib.TOMLDecodeError, ValueError) as exc:
             log.error("failed to read %s: %s", CONFIG_PATH, exc)
             return 1
 
@@ -378,7 +373,7 @@ def main(argv: list[str]) -> int:
         for name in names:
             try:
                 cfg = parse_domain_config(name, raw[name])
-            except (TypeError, ValueError) as exc:
+            except ValueError as exc:
                 log.error("%s", exc)
                 failed += 1
                 continue
@@ -391,7 +386,7 @@ def main(argv: list[str]) -> int:
             try:
                 issue_one(cfg)
                 log.info("done %s", cfg.domain)
-            except (OSError, RuntimeError) as exc:
+            except Exception as exc:
                 log.error("failed %s: %s", cfg.domain, exc)
                 failed += 1
 
@@ -400,6 +395,9 @@ def main(argv: list[str]) -> int:
             return 1
         log.info("finished with no failures")
         return 0
+    finally:
+        fcntl.flock(lock.fileno(), fcntl.LOCK_UN)
+        lock.close()
 
 
 if __name__ == "__main__":
