@@ -2,9 +2,10 @@
 """Issue or skip-renew Let's Encrypt certs via acme.sh docker, one domain per run.
 
 Host runtime this script is written for:
-  OS:      Ubuntu 24.04
-  Python:  3.14 (checked with python3 3.14.4; stdlib only, including tomllib)
-  Docker:  Engine + CLI on the host (`docker run`, `docker exec`); no daemon in this script
+  OS:      Ubuntu 26.04
+  arch:    x86_64
+  Python:  3.14 (stdlib only, including tomllib)
+  Docker:  29.7
 """
 
 from __future__ import annotations
