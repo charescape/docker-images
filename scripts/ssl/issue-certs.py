@@ -37,6 +37,7 @@ GLOBAL_KEYS = frozenset({"acmesh_image"})
 DNS_PROVIDERS = {
     "aliyun": ("dns_ali", "Ali_Key", "Ali_Secret"),
     "tencent": ("dns_tencent", "Tencent_SecretId", "Tencent_SecretKey"),
+    "dnspod": ("dns_dp", "DP_Id", "DP_Key"),
     "cloudflare": ("dns_cf", None, "CF_Token"),
 }
 KEY_LENGTHS = {
@@ -172,7 +173,7 @@ def parse_domain_config(domain: str, raw: Any) -> DomainConfig:
     if challenge == "DNS-01":
         dns_provider = str(raw.get("dns_provider", "")).strip()
         if dns_provider not in DNS_PROVIDERS:
-            raise ValueError(f"{domain}: dns_provider must be aliyun, tencent, or cloudflare")
+            raise ValueError(f"{domain}: dns_provider must be {', '.join(DNS_PROVIDERS)}")
         creds = raw.get("dns_credentials")
         if not isinstance(creds, dict):
             raise ValueError(f"{domain}: dns_credentials must be a table")
