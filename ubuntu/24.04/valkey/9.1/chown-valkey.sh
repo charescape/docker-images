@@ -8,11 +8,9 @@ mkdir -p /wwwdata/valkey/run
 mkdir -p /wwwdata/misc
 
 # Existing run volumes are not re-seeded from the image.
+# Bind-mount of /wwwdata/misc is not seeded from the image; users.acl must already be there.
 if [ ! -f /wwwdata/valkey/run/valkey.conf ]; then
   cp /usr/local/valkey/valkey.conf.default /wwwdata/valkey/run/valkey.conf
-fi
-if [ ! -f /wwwdata/valkey/run/users.acl ]; then
-  cp /usr/local/valkey/users.acl.default /wwwdata/valkey/run/users.acl
 fi
 
 chown -R www-data:www-data /usr/local/valkey/

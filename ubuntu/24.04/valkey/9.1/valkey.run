@@ -4,4 +4,10 @@
 # exec so SIGTERM from /sbin/my_init reaches valkey-server (not this shell).
 # runit requires a foreground process: daemonize no in valkey.conf.
 
+ACLFILE=/wwwdata/misc/users.acl
+if [ ! -f "$ACLFILE" ]; then
+  echo "missing ${ACLFILE}" >&2
+  exit 1
+fi
+
 exec /sbin/setuser www-data /usr/local/valkey/bin/valkey-server /wwwdata/valkey/run/valkey.conf

@@ -11,7 +11,6 @@ ENV PATH="/usr/local/valkey/bin:${PATH}"
 
 COPY ubuntu/24.04/valkey/9.1/chown-valkey.sh  /etc/my_init.d/
 COPY ubuntu/24.04/valkey/9.1/valkey.conf  /usr/local/src/
-COPY ubuntu/24.04/valkey/9.1/users.acl  /usr/local/src/
 COPY ubuntu/24.04/valkey/9.1/valkey.run  /usr/local/src/
 COPY ubuntu/24.04/valkey/9.1/jemalloc-configure-opts.sh  /usr/local/src/
 
@@ -68,8 +67,6 @@ libgmock-dev                    \
 && cd /usr/local/src \
 && cp ./valkey.conf /usr/local/valkey/valkey.conf.default \
 && cp ./valkey.conf /wwwdata/valkey/run/valkey.conf \
-&& cp ./users.acl /usr/local/valkey/users.acl.default \
-&& cp ./users.acl /wwwdata/valkey/run/users.acl \
 && chown -R www-data:www-data /usr/local/valkey \
 && chown -R www-data:www-data /wwwdata \
 \
