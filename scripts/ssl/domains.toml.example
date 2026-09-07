@@ -42,3 +42,12 @@ dns_credentials = { id = "", secret = "" }
 email = "admin@example5.com"
 key_algorithm = "rsa-2048"
 reload_container_name = "openrestyphp8v4"
+
+["dp.example6.com"]
+with_www = false
+type = "DNS-01"
+dns_provider = "dnspod"
+dns_credentials = { id = "", secret = "" }
+email = "admin@example6.com"
+key_algorithm = "ec-256"
+reload_container_name = "openrestyphp8v4"
