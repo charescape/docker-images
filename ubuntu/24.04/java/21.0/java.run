@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# Wait until JAVA_JAR is a regular file, then exec java as www-data.
+# exec so SIGTERM from /sbin/my_init reaches java (not this shell).
+# runit requires a foreground process.
+
+JAVA_JAR="${JAVA_JAR:-}"
+JAVA_OPTS="${JAVA_OPTS:-}"
+
+logged=
+while [ ! -f "$JAVA_JAR" ]; do
+  if [ -z "$logged" ]; then
+    echo "waiting for JAVA_JAR${JAVA_JAR:+ at $JAVA_JAR}" >&2
+    logged=1
+  fi
+  sleep 2
+done
+
+echo "starting java -jar ${JAVA_JAR}" >&2
+
+# Word-splitting JAVA_OPTS is intentional (multiple JVM flags).
+# shellcheck disable=SC2086
+exec /sbin/setuser www-data env HOME=/wwwdata/java /usr/local/jdk/bin/java $JAVA_OPTS -jar "$JAVA_JAR"
