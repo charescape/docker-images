@@ -8,5 +8,4 @@ mkdir -p /wwwdata/java/logs
 mkdir -p /wwwdata/java/tmp
 mkdir -p /wwwdata/misc
 
-# Do not chown /my_shared_dir (git and other sites live there).
 chown -R www-data:www-data /wwwdata/
