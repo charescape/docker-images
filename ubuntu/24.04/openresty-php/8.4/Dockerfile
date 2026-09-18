@@ -15,7 +15,7 @@ ENV COMPOSER_VERSION="2.10.3"
 ENV COMPOSER_HASH="7a2d379d5b8ffdaa028580ef26494c36d2feef4b178d3dd1473a4dbc5e17c8d6"
 ENV KILL_PROCESS_TIMEOUT=60
 ENV KILL_ALL_PROCESSES_TIMEOUT=60
-ENV PATH="/usr/local/openresty/nginx/sbin:/usr/local/php/bin:/usr/local/php/sbin:${PATH}"
+ENV PATH="/usr/local/openresty/nginx/sbin:/usr/local/php/bin:/usr/local/php/sbin:/usr/local/markitdown/bin:${PATH}"
 
 COPY ubuntu/24.04/openresty-php/8.4/chown-openresty.sh  /etc/my_init.d/
 COPY ubuntu/24.04/openresty-php/8.4/chown-php.sh  /etc/my_init.d/
@@ -290,6 +290,20 @@ libexpat1-dev                   \
 && cp /usr/local/src/php-fpm.run /etc/service/php-fpm/run \
 && chmod +x /etc/service/php-fpm/run \
 \
+\
+&& apt -yq --no-install-recommends install python3 python3-venv python3-pip \
+&& python3 -m venv /usr/local/markitdown \
+&& /usr/local/markitdown/bin/pip install -U pip \
+&& /usr/local/markitdown/bin/pip install --no-cache-dir \
+'markitdown[pdf,docx,pptx,xlsx,xls]' \
+markitdown-ocr \
+openai \
+&& ln -s /usr/local/markitdown/bin/markitdown /usr/local/bin/markitdown \
+&& /usr/local/markitdown/bin/python -c "import markitdown, openai" \
+&& /usr/local/markitdown/bin/python -c "from magika import Magika; Magika().identify_bytes(b'# test')" \
+&& /usr/local/markitdown/bin/markitdown --list-plugins \
+&& /usr/local/markitdown/bin/markitdown --list-plugins | grep -qi ocr \
+\
 && apt -y autoremove \
 && apt -y clean \
 && rm -rf /var/lib/apt/lists/* \
@@ -306,6 +320,7 @@ libexpat1-dev                   \
 \
 && du -h --max-depth=2 /usr/local/openresty | sort -hr \
 && du -h --max-depth=2 /usr/local/php | sort -hr \
+&& du -h --max-depth=2 /usr/local/markitdown | sort -hr \
 && du -h --max-depth=2 /wwwdata | sort -hr \
 && rm -rf /usr/local/src/*
 
