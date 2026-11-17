@@ -3,7 +3,7 @@ FROM phusion/baseimage:noble-1.0.3
 LABEL maintainer="charescape@outlook.com"
 
 ENV TZ="Asia/Shanghai"
-ENV MARIADB_VERSION="12.3.3"
+ENV MARIADB_VERSION="12.3.4"
 ENV KILL_PROCESS_TIMEOUT=60
 ENV KILL_ALL_PROCESSES_TIMEOUT=60
 
