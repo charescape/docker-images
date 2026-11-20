@@ -55,4 +55,6 @@ sudo make install \
 /usr/local/valkey/bin/valkey-server --version
 /usr/local/valkey/bin/valkey-cli --version
 
+mkdir -p /wwwdata/valkey/data /wwwdata/valkey/run /wwwdata/misc
+
 echo "Valkey 9.1.4 installation completed."
