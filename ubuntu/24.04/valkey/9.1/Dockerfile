@@ -57,10 +57,10 @@ libgmock-dev                    \
 \
 && cd /usr/local/src/valkey-${VALKEY_VERSION} \
 && JEMALLOC_CONFIGURE_OPTS="$(sh /usr/local/src/jemalloc-configure-opts.sh)" \
-&& make -j$(nproc --all) BUILD_TLS=yes USE_SYSTEMD=no PREFIX=/usr/local/valkey \
+&& make -j$(nproc --all) BUILD_TLS=yes USE_SYSTEMD=no USE_REDIS_SYMLINKS=no PREFIX=/usr/local/valkey \
      JEMALLOC_CONFIGURE_OPTS="${JEMALLOC_CONFIGURE_OPTS}" \
 && sleep 3s \
-&& make BUILD_TLS=yes USE_SYSTEMD=no PREFIX=/usr/local/valkey \
+&& make BUILD_TLS=yes USE_SYSTEMD=no USE_REDIS_SYMLINKS=no PREFIX=/usr/local/valkey \
      JEMALLOC_CONFIGURE_OPTS="${JEMALLOC_CONFIGURE_OPTS}" install \
 \
 \
