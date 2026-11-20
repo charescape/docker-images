@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 
-# Install build dependencies
 apt update
 apt -y install \
     build-essential \
