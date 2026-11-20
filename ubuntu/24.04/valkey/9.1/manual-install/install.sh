@@ -1,4 +1,17 @@
 #!/bin/bash
+#
+# Valkey 9.1 源码安装
+#
+# 运行环境：
+#   CPU(s): 2 vCPU
+#   Mem: 4 GiB
+#   Disk: 100 GiB SSD
+#   OS: Ubuntu 24.04
+#   arch: x86_64
+#   timezone: Asia/Shanghai
+#   Valkey Version: 9.1.4，源码编译
+#   类型：独立单实例，非 cluster / sentinel
+#
 
 set -e
 
