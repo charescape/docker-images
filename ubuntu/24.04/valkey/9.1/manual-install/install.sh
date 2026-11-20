@@ -10,6 +10,7 @@
 #   OS: Ubuntu 24.04
 #   arch: x86_64
 #   timezone: Asia/Shanghai
+#   Docker Version: 未安装
 #   Valkey Version: 9.1.4，源码编译
 #   类型：独立单实例，非 cluster / sentinel
 #
