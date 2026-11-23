@@ -5,6 +5,8 @@ set -euo pipefail
 # Settings from /wwwdata/misc/mariadb12v3.conf (MARIADB_BACKUP_*).
 # --scheduled: heartbeat from cron; HOUR/MINUTE (TZ) may dump; ENABLE off skips.
 # Manual run (no --scheduled) does not check time or ENABLE.
+# --all-databases includes mysql.*; restore only onto the same 12.3 instance.
+# Seeding a 13.3 replica is scripts/mariadb/replica-seed.py in docker-images-docs.
 
 scheduled=0
 if [ "${1:-}" = "--scheduled" ]; then
