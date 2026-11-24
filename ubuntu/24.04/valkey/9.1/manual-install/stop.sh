@@ -23,7 +23,7 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 PIDFILE=/wwwdata/valkey/run/valkey.pid
-STOP_TIMEOUT=360
+STOP_TIMEOUT=60
 
 if [ ! -f "$PIDFILE" ]; then
     exit 0
