@@ -133,7 +133,6 @@ libexpat1-dev                   \
 --with-http_secure_link_module \
 --with-http_slice_module \
 --with-http_stub_status_module \
---with-http_iconv_module \
 --without-mail_pop3_module \
 --without-mail_imap_module \
 --without-mail_smtp_module \
