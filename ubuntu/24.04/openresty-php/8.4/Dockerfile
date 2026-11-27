@@ -73,6 +73,7 @@ libssl-dev                      \
 libcurl4-openssl-dev            \
 libpcre2-dev                    \
 zlib1g-dev                      \
+libicu-dev                      \
 libxslt1-dev                    \
 libsqlite3-dev                  \
 libbz2-dev                      \
@@ -90,7 +91,6 @@ libtidy-dev                     \
 libzip-dev                      \
 libzstd-dev                     \
 libpq-dev                       \
-libexpat1-dev                   \
 \
 \
 && chmod +x /etc/my_init.d/chown-openresty.sh \
@@ -187,6 +187,7 @@ libexpat1-dev                   \
 --with-config-file-path=/usr/local/php/etc \
 --with-config-file-scan-dir=/usr/local/php/etc/conf.d \
 --with-pic \
+--with-mhash \
 --enable-fpm \
 --with-fpm-user=www-data \
 --with-fpm-group=www-data \
@@ -210,7 +211,6 @@ libexpat1-dev                   \
 --enable-simplexml \
 --enable-tokenizer \
 --enable-xml \
---with-expat \
 --enable-xmlreader \
 --enable-xmlwriter \
 \
