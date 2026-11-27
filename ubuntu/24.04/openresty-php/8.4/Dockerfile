@@ -185,11 +185,17 @@ libexpat1-dev                   \
 \
 && cd /usr/local/src/php-${PHP_VERSION} \
 && ./configure --prefix=/usr/local/php \
+--enable-option-checking=fatal \
+--with-config-file-path=/usr/local/php/etc \
+--with-config-file-scan-dir=/usr/local/php/etc/conf.d \
+--with-pic \
 --enable-fpm \
 --with-fpm-user=www-data \
 --with-fpm-group=www-data \
 \
 \
+--disable-cgi \
+--disable-phpdbg \
 --enable-opcache \
 --enable-ipv6 \
 --enable-ctype \
@@ -211,9 +217,9 @@ libexpat1-dev                   \
 --enable-xmlwriter \
 \
 \
---enable-phpdbg \
 --disable-short-tags \
 --with-openssl \
+--with-system-ciphers \
 --with-ftp-ssl \
 --with-zlib \
 --enable-bcmath \
@@ -230,13 +236,15 @@ libexpat1-dev                   \
 --enable-gd-jis-conv \
 --with-gettext \
 --with-gmp \
+--with-iconv \
 --enable-intl \
 --enable-mbstring \
 --enable-mysqlnd \
 --with-mysqlnd-ssl \
---enable-pdo \
 --with-mysqli \
 --with-pdo-mysql=mysqlnd \
+--with-sqlite3 \
+--with-pdo-sqlite \
 --enable-pcntl \
 --with-readline \
 --enable-soap \
@@ -261,13 +269,15 @@ libexpat1-dev                   \
 && make install \
 \
 && cd /usr/local/src \
+&& mkdir -p /usr/local/php/etc/conf.d \
 && rm -f /usr/local/php/etc/php-fpm.conf \
 && rm -f /usr/local/php/etc/php-fpm.d/www.conf \
 && rm -f /usr/local/php/lib/php.ini \
+&& rm -f /usr/local/php/etc/php.ini \
 \
 && mv ./php-fpm.conf /usr/local/php/etc/php-fpm.conf \
 && mv ./www.conf     /usr/local/php/etc/php-fpm.d/www.conf \
-&& mv ./php.ini      /usr/local/php/lib/php.ini \
+&& mv ./php.ini      /usr/local/php/etc/php.ini \
 \
 && mv ./composer.phar /usr/local/bin/composer \
 && chmod +x /usr/local/bin/composer \
