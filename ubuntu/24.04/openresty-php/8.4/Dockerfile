@@ -255,6 +255,7 @@ libexpat1-dev                   \
 --with-sodium \
 --with-password-argon2 \
 --enable-ftp \
+--with-pear \
 --with-ffi \
 --with-pdo-pgsql \
 --enable-zend-max-execution-timers \
