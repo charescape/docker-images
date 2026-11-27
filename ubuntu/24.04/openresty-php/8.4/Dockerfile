@@ -80,7 +80,6 @@ libpng-dev                      \
 libavif-dev                     \
 libwebp-dev                     \
 libjpeg-dev                     \
-libxpm-dev                      \
 libfreetype6-dev                \
 libgmp-dev                      \
 libonig-dev                     \
@@ -91,7 +90,6 @@ libtidy-dev                     \
 libzip-dev                      \
 libzstd-dev                     \
 libpq-dev                       \
-libcapstone-dev                 \
 libexpat1-dev                   \
 \
 \
@@ -232,8 +230,6 @@ libexpat1-dev                   \
 --with-avif \
 --with-webp \
 --with-jpeg \
---with-xpm \
---enable-gd-jis-conv \
 --with-gettext \
 --with-gmp \
 --with-iconv \
@@ -259,8 +255,6 @@ libexpat1-dev                   \
 --with-sodium \
 --with-password-argon2 \
 --enable-ftp \
---with-capstone \
---with-pear \
 --with-pdo-pgsql \
 --enable-zend-max-execution-timers \
 \
