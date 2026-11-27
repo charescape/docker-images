@@ -91,6 +91,7 @@ libtidy-dev                     \
 libzip-dev                      \
 libzstd-dev                     \
 libpq-dev                       \
+libffi-dev                      \
 \
 \
 && chmod +x /etc/my_init.d/chown-openresty.sh \
