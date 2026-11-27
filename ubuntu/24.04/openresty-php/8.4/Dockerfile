@@ -11,6 +11,9 @@ ENV FLV_VERSION="1.2.15"
 ENV FLV_HASH="ac963f9802b9ec4cc00f1958526f17c1c17f26489604539138c7758985c797d4"
 ENV PHP_VERSION="8.4.27"
 ENV PHP_HASH="5bafed9994c1a49796b25b5f61c22c9183bfe046b6acc7b363842d03c77f972f"
+ENV PHP_CFLAGS="-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
+ENV PHP_CPPFLAGS="${PHP_CFLAGS} -D_FORTIFY_SOURCE=2"
+ENV PHP_LDFLAGS="-Wl,-O1 -Wl,-z,relro -Wl,-z,now -pie"
 ENV COMPOSER_VERSION="2.11.1"
 ENV COMPOSER_HASH="6f1b891e1d4927d62740276c540fb490e47689e19e102c49e8da849794882f8c"
 ENV KILL_PROCESS_TIMEOUT=60
@@ -183,6 +186,7 @@ libffi-dev                      \
 \
 \
 && cd /usr/local/src/php-${PHP_VERSION} \
+&& export CFLAGS="$PHP_CFLAGS" CPPFLAGS="$PHP_CPPFLAGS" LDFLAGS="$PHP_LDFLAGS" \
 && ./configure --prefix=/usr/local/php \
 --enable-option-checking=fatal \
 --with-config-file-path=/usr/local/php/etc \
